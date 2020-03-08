@@ -1,14 +1,6 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
+    <Navbar />
     <slot/>
   </div>
 </template>
@@ -20,6 +12,19 @@ query {
   }
 }
 </static-query>
+
+<script>
+import Navbar from '../components/NavBar'
+
+export default {
+  metaInfo: {
+    title: 'Sistecaut, Lda'
+  },
+  components: {
+    Navbar
+  }
+}
+</script>
 
 <style>
 body {
@@ -36,15 +41,4 @@ body {
   padding-right: 20px;
 }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
-
-.nav__link {
-  margin-left: 20px;
-}
 </style>
