@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "color-no-invalid-hex": true,
+    "color-no-empty": true,
+    "number-max-precision": 2  
+
+  }
+}
