@@ -30,9 +30,15 @@ export default {
 </script>
 
 <style>
-body {
-  
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
 
+@font-face {
+  font-family: Iosevka Term Nerd Font Complete;
+  src: url('../assets/fonts/Iosevka Term Nerd Font Complete.ttf');
+  font-weight: normal;
 }
+
+body {
+  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
 </style>
