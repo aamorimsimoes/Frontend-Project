@@ -1,6 +1,6 @@
 <template>
   <li class="carousel__navigation-item">
-    <button class="carousel__navigation-button">Go to slide</button>
+    <button class="carousel__navigation-button"/>
   </li>
 </template>
 
@@ -145,12 +145,12 @@ ol, li {
 
 .carousel__navigation-button {
   display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #333;
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
   background-clip: content-box;
-  border: .25rem solid transparent;
-  border-radius: 50%;
+  border: 2px solid transparent;
+  border-radius: 15px;
   font-size: 0;
   transition: transform .1s;
 }

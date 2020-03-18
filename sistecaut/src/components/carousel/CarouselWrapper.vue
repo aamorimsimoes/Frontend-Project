@@ -89,10 +89,11 @@ ol, li {
 }
 
 .carousel {
-  position: relative;
-  padding-top: 75%;
   filter: drop-shadow(0 0 10px #0003);
   perspective: 100px;
+  height: 100vh;
+  padding: 0;
+  margin-bottom: 20px;
 }
 
 .carousel__viewport {
@@ -106,6 +107,7 @@ ol, li {
   counter-reset: item;
   scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
+  height: 100vh;
 }
 
 .carousel__slide {
@@ -144,7 +146,6 @@ ol, li {
 }
 
 .carousel__navigation {
-  position: absolute;
   right: 0;
   bottom: 0;
   left: 0;
@@ -154,18 +155,6 @@ ol, li {
 .carousel__navigation-list,
 .carousel__navigation-item {
   display: inline-block;
-}
-
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #fff;
-  background-clip: content-box;
-  border: .25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform .1s;
 }
 
 </style>
