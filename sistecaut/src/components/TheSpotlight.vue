@@ -47,8 +47,8 @@ export default {
   /* this css class will be used in every img html element
     it centralizes the image to the size of its container
     and stretches it to fit everything
-  */
-  img {
+
+    img changed to #spotlightImg {
     filter: blur(5px) grayscale(80%); // apply filter blur, grayscale and adjust its intensity 
     background-position: center;
     background-size: cover;
@@ -58,4 +58,18 @@ export default {
     overflow: hidden;
     width: 100vw; 
   }
+  */
+  
+  
+  #spotlightImg {
+    filter: blur(5px) grayscale(80%); // apply filter blur, grayscale and adjust its intensity 
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    object-fit: cover;
+    object-position: right;
+    overflow: hidden;
+    width: 100vw; 
+  }
+  
 </style>
