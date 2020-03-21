@@ -1,10 +1,10 @@
 <template>
+
   <Layout>
     <CarouselWrapper />
+    <About />
     <Spotlight />
     <Footer />  
-    <About />
-    <Contacts />
 
 <div class="main" id="section1">
   <h2>Section 1</h2>
@@ -22,20 +22,20 @@
 </template>
 
 <script>
+
 import NavBar from '@/components/TheNavbar'
 import CarouselWrapper from '@/components/carousel/CarouselWrapper'
 import Spotlight from '@/components/TheSpotlight'
 import Footer from '@/components/TheFooter'
-import About from '@/components/About'
-import Contacts from '@/components/TheContacts'
+import About from '@/components/TheAbout'
+
 export default {
   components: { // insert here the name of the component
     NavBar,
     CarouselWrapper,
     Spotlight,
     Footer,
-    About,
-    Contacts
+    About
   },
   name: 'Sistecaut'
 }
