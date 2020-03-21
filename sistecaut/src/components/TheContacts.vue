@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>Contact Me</h1>
+  <div class="contactMe">
+    <h3>Contact Me</h3>
   <p>
     <ul>
       <li>Email: {{email}}</li>
@@ -12,7 +12,7 @@
 
 <script>
 export default {
-  name: 'Contacts',
+  name: 'TheContacts',
   data(){
     return {
       email: 'maegan@maeganwilson.com',
@@ -24,4 +24,9 @@ export default {
 
 <style>
 
+  .contactMe {
+    margin: 15px;
+    height: 50vh;
+    width: 100%;
+  }
 </style>
