@@ -19,12 +19,29 @@ export default {
 </script>
 
 <style>
+a:link {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+}
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+a:active {
+  text-decoration: none;
+}
 .header {
-  align-items: center;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   display: flex;
+  font-family: Iosevka Term Nerd Font Complete;
+  font-size: xx-large;
   height: 80px;
   justify-content: space-between;
+  padding-left: 1vh;
+  text-align: center;
 }
 .nav__link {
   margin-left: 20px;
