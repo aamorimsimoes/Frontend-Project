@@ -1,5 +1,6 @@
 <template>
-  <div id="footer">
+  <div id="footerWrapper"> <!-- only one component inside template (div id=footer & <TheContacts />) -->
+    <div id="footer">
       <div class="item">
         <h3>CONTATOS</h3>
         <ul>
@@ -62,13 +63,20 @@
           </li>
         </ul>
       </div>
+  </div>
+    <TheContacts />
 </div>
 
 </template>
 
 <script>
+import TheContacts from "@/components/TheContacts"
+
 export default {
-  name: 'Footer'
+  name: 'Footer',
+  components: {
+    TheContacts
+  }
 }
 </script>
 
@@ -76,7 +84,7 @@ export default {
   @import "~/assets/styles/_components";
 
   #footer {
-    //background-color: #6286a9;
+    background-color: #6286a9;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -84,10 +92,15 @@ export default {
     align-items: stretch; // baseline adapts height in relation to content
   }
 
+  #footer ul, h3 {
+    padding: 0;
+    text-align: center;
+  }
+
   .item {
     width: 400px;
     color: black;
-    //background: white;
+    background: white;
     margin: 15px;    
   }
 
