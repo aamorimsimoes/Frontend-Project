@@ -1,10 +1,7 @@
 <template>
-  <div>
-    <Navbar />
-    <div class="layout">
-      <slot/>
-    </div>
-  </div>
+  <Navbar>
+    <slot />
+  </Navbar>
 </template>
 
 <static-query>
@@ -16,29 +13,31 @@ query {
 </static-query>
 
 <script>
-import Navbar from '../components/TheNavbar'
+import Navbar from "../components/TheNavbar";
 
 export default {
   metaInfo: {
-    title: 'Sistecaut, Lda'
+    title: "Sistecaut, Lda"
   },
   components: {
     Navbar
   }
-}
-
+};
 </script>
 
 <style>
-
 @font-face {
   font-family: Iosevka Term Nerd Font Complete;
-  src: url('../assets/fonts/Iosevka Term Nerd Font Complete.ttf');
+  src: url("../assets/fonts/Iosevka Term Nerd Font Complete.ttf");
   font-weight: normal;
 }
 
 body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
 }
 
+.bigTemplate {
+  display: block;
+}
 </style>
