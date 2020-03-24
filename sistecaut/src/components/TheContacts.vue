@@ -24,9 +24,16 @@ export default {
 
 <style>
 
+.contactMe {
+  margin: 15px;
+  height: 90vh;
+  width: 90vw;
+  padding: 0vh 5vw 0vh 5vw;
+}
+
+@media (min-width: 1025px) {
   .contactMe {
-    margin: 15px;
-    height: 50vh;
-    width: 100%;
+    height: 40vh;
   }
+}
 </style>
