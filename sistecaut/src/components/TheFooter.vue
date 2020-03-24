@@ -1,5 +1,6 @@
 <template>
-  <div id="footerWrapper"> <!-- only one component inside template (div id=footer & <TheContacts />) -->
+  <div id="footerWrapper">
+    <!-- only one component inside template (div id=footer & <TheContacts />) -->
     <div id="footer">
       <div class="item">
         <h3>CONTATOS</h3>
@@ -17,7 +18,7 @@
             E-mail:
           </li>
           <li>
-            sistecaut@sistecaut.com   
+            sistecaut@sistecaut.com
           </li>
           <li>
             Morada:
@@ -59,62 +60,69 @@
             SISTECAUT Lda.
           </li>
           <li>
-            © 2020 <!-- search this information according to calendar date (always updated) -->
+            © 2020
+            <!-- search this information according to calendar date (always updated) -->
           </li>
         </ul>
       </div>
-  </div>
+    </div>
     <TheContacts />
-</div>
-
+  </div>
 </template>
 
 <script>
-import TheContacts from "@/components/TheContacts"
+import TheContacts from "@/components/TheContacts";
 
 export default {
-  name: 'Footer',
+  name: "Footer",
   components: {
     TheContacts
   }
-}
+};
 </script>
 
 <style lang="scss">
-  @import "~/assets/styles/_components";
+@import "~/assets/styles/_components";
 
+#footer {
+  background-color: #6286a9;
+  height: 90vh;
+  width: 90vw;
+  padding: 0vh 5vw 0vh 5vw;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+  align-items: stretch;
+}
+
+#footer ul {
+  list-style-type: none;
+  text-align: center;
+}
+
+@media (min-width: 1025px) {
   #footer {
-    background-color: #6286a9;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch; // baseline adapts height in relation to content
+    height: 40vh;
   }
+}
 
-  #footer ul, h3 {
-    padding: 0;
-    text-align: center;
-  }
+.item {
+  // width: 100px;
+  color: black;
+  background: white;
+  margin: 15px;
+}
 
-  .item {
-    width: 400px;
-    color: black;
-    background: white;
-    margin: 15px;    
-  }
-
-  .item:nth-child(1) {
-    order: 1;
-    flex-grow: 1;
-  }
-  .item:nth-child(2) {
-    order: 2;
-    flex-grow: 1;
-  }
-  .item:nth-child(3) {
-    order: 3;
-    flex-grow: 1;
-  }
-
+.item:nth-child(1) {
+  order: 1;
+  flex: 1;
+}
+.item:nth-child(2) {
+  order: 2;
+  flex: 1;
+}
+.item:nth-child(3) {
+  order: 3;
+  flex: 1;
+}
 </style>
