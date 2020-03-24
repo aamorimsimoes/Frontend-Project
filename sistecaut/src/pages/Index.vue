@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import Carousel from "@/components/Carousel/Carousel";
+import Carousel from "@/components/carousel/Carousel";
 import Spotlight from "@/components/TheSpotlight";
 import Footer from "@/components/TheFooter";
 import About from "@/components/TheAbout";
