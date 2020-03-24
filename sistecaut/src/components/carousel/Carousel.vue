@@ -1,178 +1,173 @@
 <template>
-  <li v-bind:id="current"
-          tabindex="0"
-          class="carousel__slide">
-    <div class="carousel__snapper">
-      <button class="carousel__prev">Go to last slide</button>
-      <button oClick="applyAction()" class="carousel__next">Go to next slide</button>
+  <div class="carouselViewport">
+    <button
+      v-on:click="handlePreviousClick"
+      class="arrowButtons buttonPrevious"
+    >
+      &lt; <!-- symbol for the less than char (<) -->
+    </button>
+    <button v-on:click="handleNextClick" class="arrowButtons buttonNext">
+      &gt; <!-- symbol for the greater than char (>) -->
+    </button>
+    <div
+      v-for="(slide, index) in slides"
+      :key="slide.id"
+      :id="slide.id"
+      class="carouselSlider"
+      :style="{ zIndex: slides.length - index }"
+    >
+      <CarouselContent :title="slide.title" :imgSource="slide.img" :subtitle="slide.subtitle" />
     </div>
-    </li>
+  </div>
 </template>
 
 <script>
-function applyAction() {
-  const liComp = document.querySelector(current);
-  console.log("LICOMP = ", liComp)
-  liComp.classList.toggle("carousel__snapper:after ")
+let current = 0;
+const slides = [
+  {
+    id: "slider0",
+    title: "This is the first slide",
+    subtitle: "THIS IS A SUBTITLE",
+    img: "myImg.jpg"
+  },
+  {
+    id: "slider1",
+    title: "This is the second slide",
+    img: "myImgMechanical.jpg"
+  },
+  {
+    id: "slider2",
+    title: "This is the third slide"
+  }
+];
+
+/**
+ * Handles the carousel movement according to the direction choosen
+ * @param {"left" | "right"} direction
+ */
+function handleArrowClick(direction) {
+  // get the current top div
+  const currentDiv = document.getElementById(slides[current].id);
+  let translationCurrentDiv;
+  let translationNextDiv;
+
+  // get the id of the div to show
+  // if it is to the right, it should sum, except if it is the last one in the array; in that case, go to the start
+  if (direction === "right") {
+    if (current === slides.length - 1) {
+      current = 0;
+    } else {
+      current++;
+    }
+    // set the direction for the transition
+    translationCurrentDiv = "translate(100vw, 0)";
+    translationNextDiv = "translate(-100vw, 0)";
+  }
+  // if it is to the left, it should subtract, except if it is the first one in the array; in that case, go to the end
+  else {
+    if (current === 0) {
+      current = slides.length - 1;
+    } else {
+      current--;
+    }
+    translationCurrentDiv = "translate(-100vw, 0)";
+    translationNextDiv = "translate(100vw, 0)";
+  }
+
+  // get the div to show (with the current value updated)
+  const nextDiv = document.getElementById(slides[current].id);
+  // remove the transition time from the div to show
+  nextDiv.style.transition = "";
+  // to make the transition of the next one possible, translate it 100vw to the oposite direction
+  nextDiv.style.transform = translationNextDiv;
+
+  // this time out prevents the execution of the previous translation to be within 1s
+  setTimeout(() => {
+    // set the transition time in both divs
+    currentDiv.style.transition = "1s ease-in-out";
+    nextDiv.style.transition = "1s ease-in-out";
+    // translate the current top div to the given direction
+    currentDiv.style.transform = translationCurrentDiv;
+    // translate the div to show back to the center
+    nextDiv.style.transform = "translate(0, 0)";
+  }, 1);
 }
 
+import CarouselContent from "./CarouselContent";
+
 export default {
-  name: 'Carousel',
-  props: {
-    current: String,
-    previous: String,
-    next: String
+  name: "Carousel",
+  data() {
+    return {
+      slides
+    };
+  },
+  methods: {
+    handlePreviousClick: function() {
+      handleArrowClick("left");
+    },
+    handleNextClick: function() {
+      handleArrowClick("right");
+    }
+  },
+  components: {
+    CarouselContent
   }
-}
+};
 </script>
 
 <style>
-@keyframes tonext {
-  75% {
-    left: 0;
-  }
-  95% {
-    left: 100%;
-  }
-  98% {
-    left: 100%;
-  }
-  99% {
-    left: 0;
-  }
+.carouselViewport {
+  height: 95vh;
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
 }
 
-@keyframes snap {
-  96% {
-    scroll-snap-align: center;
-  }
-  97% {
-    scroll-snap-align: none;
-  }
-  99% {
-    scroll-snap-align: none;
-  }
-  100% {
-    scroll-snap-align: center;
-  }
-}
-
-* {
-  box-sizing: border-box;
-  scrollbar-color: transparent transparent; /* thumb and track color */
-  scrollbar-width: 0px;
-}
-
-*::-webkit-scrollbar {
-  width: 0;
-}
-
-*::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-*::-webkit-scrollbar-thumb {
-  background: transparent;
+.arrowButtons {
+  z-index: 99;
+  position: absolute;
+  top: 50vh;
+  color: white;
+  background-color: rgba(0, 0, 0, .3);
+  height: 5vh;
+  width: 5vh;
+  border-radius: 10vh;
   border: none;
+  font-weight: lighter;
+  font-size: larger;
 }
 
-* {
-  -ms-overflow-style: none;
+.arrowButtons:focus {
+  outline: none;
 }
 
-ol, li {
-  list-style: none;
-  margin: 0;
-  padding: 0;
+.arrowButtons:hover {
+  background-color: rgba(0, 0, 0, 1);
 }
 
-.carousel {
-  position: relative;
-  padding-top: 75%;
-  filter: drop-shadow(0 0 10px #0003);
-  perspective: 100px;
+.buttonPrevious {
+  left: 15px;
 }
 
-.carousel__viewport {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  display: flex;
-  overflow-x: scroll;
-  counter-reset: item;
-  scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+.buttonNext {
+  right: 15px;
 }
 
-.carousel__slide {
-  position: relative;
-  flex: 0 0 100%;
-  width: 100%;
-  background-color: #f99;
-  counter-increment: item;
-}
-
-/* to be removed */
-.carousel__slide:nth-child(even) {
-  background-color: #99f;
-}
-
-.carousel__slide:before {
-  content: counter(item);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%,-40%,70px);
-  color: #fff;
-  font-size: 2em;
-}
-
-.carousel__snapper {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  scroll-snap-align: center;
-}
-
-.carousel__snapper:after {
-  animation-name: tonext, snap;
-  animation-timing-function: ease;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
-}
-
-.carousel:hover .carousel__snapper,
-.carousel:focus-within .carousel__snapper {
-  animation-name: none;
-}
-
-.carousel__navigation {
+.carouselSlider {
+  width: 100vw;
+  height: 95vh;
   position: absolute;
   right: 0;
-  bottom: 0;
   left: 0;
-  text-align: center;
+  bottom: 0;
 }
 
-.carousel__navigation-list,
-.carousel__navigation-item {
-  display: inline-block;
-}
-
-.carousel__navigation-button {
-  display: inline-block;
-  width: 1.5rem;
-  height: 1.5rem;
-  background-color: #333;
-  background-clip: content-box;
-  border: .25rem solid transparent;
-  border-radius: 50%;
-  font-size: 0;
-  transition: transform .1s;
+@media (min-width: 1025px) {
+  .carouselViewport,
+  .carouselSlider {
+    height: 90vh;
+  }
 }
 
 </style>
