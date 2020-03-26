@@ -10,7 +10,7 @@
   
     <form 
       class="contactMe"
-      name="contactus"
+      name="contact"
       method="post"
       v-on:submit.prevent="handleSubmit"
       action="/success/"
