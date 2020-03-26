@@ -4,23 +4,23 @@
 @import "components";
 
 html {
-  scroll-behavior: smooth;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 #section1 {
-  height: 95vh;
-  width: 90vw;
   background-color: pink;
+  height: 95vh;
   padding: 5vh 5vw 5vh 5vw;
+  width: 90vw;
 }
 
 #section2 {
+  background-color: yellow;
   height: 95vh;
   padding-top: 5vh;
-  width: 90vw;
   padding: 5vh 5vw 5vh 5vw;
-  background-color: yellow;
+  width: 90vw;
 }
 
 @media (min-width: 1025px) {
