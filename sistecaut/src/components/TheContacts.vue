@@ -9,12 +9,14 @@
   </p> -->
   
     <form 
-      name="contact"
+      class="contactMe"
+      name="contactus"
       method="post"
       v-on:submit.prevent="handleSubmit"
       action="/success/"
       data-netlify="true"
       data-netlify-honeypot="bot-field"
+      data-netlify-recaptcha="true"
     >
       <input type="hidden" name="form-name" value="contact" />
       <p hidden>
@@ -37,29 +39,10 @@
           <label for="message">Message</label>
           <textarea name="message" cols="30" rows="10" placeholder="Message" v-model="formData.message"></textarea>
         </div>
-
+        <div data-netlify-recaptcha="true"></div>
         <button type="submit">Submit form</button>
       </form>
 
-
-
-      <!-- <div>
-      <input type="text" name="name" v-model="formData.name" placeholder="Full Name" />
-    </div>
-      <input type="email" name="email" v-model="formData.email" placeholder="Email">
-      <label>
-        Your Role: 
-      <select name="role[]" multiple>
-        <option value="leader">Leader</option>
-        <option value="follower">Follower</option>
-      </select>
-    </label>
-      <input type="email" placeholder="sistecaut@example.com" disabled>
-      <textarea name="message" cols="30" rows="10" placeholder="Message"></textarea>
-      <button type="submit">Send</button>
-    </form>
-  </div>
-  </div> -->
 </template>
 
 <script>
@@ -105,39 +88,62 @@ export default {
 
 <style lang='scss'>
 
-// .contactMe {
-//   margin: 15px;
-//   height: 90vh;
-//   width: 90vw;
-//   padding: 0vh 5vw 0vh 5vw;
-// }
+#formName {
+  margin: 15px;
+  height: 90vh;
+  width: 90vw;
+  padding: 0vh 5vw 0vh 5vw;
+}
 
-// @media (min-width: 1025px) {
-//   .contactMe {
-//     height: 40vh;
-//   }
-// }
+@media (min-width: 1025px) {
+  .contactMe {
+    height: 40vh;
+  }
+}
 
-// form input,
-// form textarea {
-//   display: block;
-//   width: 500px;
-//   padding: 20px;
-//   border: 3px solid lightgray;
-//   margin: 20px 0;
-//   outline: none;
-//   font-size: 1.2rem;
-//   color: black;
-//   position: relative;
-//   left: 50%;
-//   right: 50%;
-//   transform: translateX(-50%);
-// }
+form input,
+form textarea, {
+  border: 3px solid lightgray;
+  color: black;
+  display: block;
+  font-size: 1.2rem;
+  left: 50%;
+  margin: 20px 0;
+  outline: none;
+  padding: 20px;
+  position: relative;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+}
 
-// form input:last-child {
-//   width: 150px;
-//   background-color: darkgray;
-//   border: none;
-//   cursor: pointer;
-// }
+label {
+  color: black;
+  display: block;
+  font-size: 1.2rem;
+  left: 50%;
+  margin: 20px 0;
+  outline: none;
+  position: relative;
+  right: 50%;
+  transform: translateX(-50%);
+  width: 500px;
+}
+
+form button:last-child {
+  background-color: lightgray;
+  border: none;
+  color: black;
+  cursor: pointer;
+  display: block;
+  width: 150px;
+  font-size: 1.2rem;
+  left: 50%;
+  margin: 20px 0;
+  outline: none;
+  position: relative;
+  right: 50%;
+  transform: translateX(-50%);
+  
+}
 </style>
