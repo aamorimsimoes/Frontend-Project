@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'sistecautProject',
+  siteUrl: 'https://sistecautproject.netlify.com',
   plugins: [],
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')
@@ -13,5 +14,16 @@ module.exports = {
     svgRule
       .use('vue-svg-loader')
       .loader('vue-svg-loader')
+  },
+  icon: {
+    favicon: {
+      src: './src/assets/icons/logo (1).png',
+      sizes: [16, 32, 96]
+    },
+    touchicon: {
+      src: './src/assets/icons/logo (1).png',
+      sizes: [76, 152, 120, 167],
+      precomposed: true
+    }
   }
 }
