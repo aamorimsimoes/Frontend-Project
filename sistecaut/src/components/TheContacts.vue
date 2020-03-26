@@ -7,41 +7,42 @@
       <li>Website: {{web}}</li>
     </ul>
   </p> -->
-  
-    <form 
-      class="contactMe"
-      name="contact"
-      method="post"
-      v-on:submit.prevent="handleSubmit"
-      action="/success/"
-      data-netlify="true"
-      data-netlify-honeypot="bot-field"
-      data-netlify-recaptcha="true"
-    >
-      <input type="hidden" name="form-name" value="contact" />
-      <p hidden>
-        <label>
-        Don’t fill this out: <input name="bot-field" />
-        </label>
-        </p>
-        <div class="sender-info">
-          <div>
-            <label for="name" class="label" >Full Name</label>
-            <input type="text" name="name" v-model="formData.name" />
+    <div class="formWrapper">
+      <form 
+        class="contactMe"
+        name="contact"
+        method="post"
+        v-on:submit.prevent="handleSubmit"
+        action="/success/"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+        data-netlify-recaptcha="true"
+      >
+        <input type="hidden" name="form-name" value="contact" />
+        <p hidden>
+          <label>
+          Don’t fill this out: <input name="bot-field" />
+          </label>
+          </p>
+          <div class="sender-info">
+            <div>
+              <label for="name" class="label" placeholder="Write here your name">Full Name</label>
+              <input type="text" name="name" v-model="formData.name" />
+            </div>
+            <div>
+              <label for="email" placeholder="Email">Your Email</label>
+              <input type="email" name="email" v-model="formData.email" />
+            </div>
           </div>
-          <div>
-            <label for="email">Your Email</label>
-            <input type="email" name="email" v-model="formData.email" />
-          </div>
-        </div>
 
-        <div class="message-wrapper">
-          <label for="message">Message</label>
-          <textarea name="message" cols="30" rows="10" placeholder="Message" v-model="formData.message"></textarea>
-        </div>
-        <div data-netlify-recaptcha="true"></div>
-        <button type="submit">Submit form</button>
-      </form>
+          <div class="message-wrapper">
+            <label for="message">Message</label>
+            <textarea name="message" cols="30" rows="10" placeholder="Message" v-model="formData.message"></textarea>
+          </div>
+          <div data-netlify-recaptcha="true"></div>
+          <button type="submit">Submit form</button>
+        </form>
+      </div>
 
 </template>
 
