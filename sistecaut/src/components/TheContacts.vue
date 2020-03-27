@@ -7,7 +7,7 @@
       <li>Website: {{web}}</li>
     </ul>
   </p> -->
-    <div class="formWrapper">
+  
       <form 
         class="contactMe"
         name="contact"
@@ -42,7 +42,7 @@
           <div data-netlify-recaptcha="true"></div>
           <button type="submit">Submit form</button>
         </form>
-      </div>
+
 
 </template>
 
