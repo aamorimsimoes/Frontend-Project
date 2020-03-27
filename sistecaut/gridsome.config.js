@@ -6,6 +6,7 @@
 
 module.exports = {
   siteName: 'sistecautProject',
+  siteDescription: 'A simple, beautiful & minimalistic project using Gridsome',
   siteUrl: 'https://sistecautproject.netlify.com',
   plugins: [],
   chainWebpack: config => {
