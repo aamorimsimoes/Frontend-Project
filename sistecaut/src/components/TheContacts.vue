@@ -85,8 +85,6 @@ export default {
 }
 </script>
 
-<
-
 <style lang='scss'>
 
 #formName {
@@ -103,7 +101,7 @@ export default {
 }
 
 form input,
-form textarea, {
+form textarea {
   border: 3px solid lightgray;
   color: black;
   display: block;
