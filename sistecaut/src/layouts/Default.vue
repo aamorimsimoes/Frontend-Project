@@ -20,12 +20,14 @@ export default {
     title: "Sistecaut, Lda"
   },
   components: {
-    Navbar
+    Navbar,
+    // ToggleTheme
   }
 };
 </script>
 
 <style>
+
 @font-face {
   font-family: Iosevka Term Nerd Font Complete;
   src: url("../assets/fonts/Iosevka Term Nerd Font Complete.ttf");

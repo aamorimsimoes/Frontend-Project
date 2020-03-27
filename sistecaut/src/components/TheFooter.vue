@@ -66,6 +66,7 @@
         </ul>
       </div>
     </div>
+    <span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a></span>
     <TheContacts />
   </div>
 </template>

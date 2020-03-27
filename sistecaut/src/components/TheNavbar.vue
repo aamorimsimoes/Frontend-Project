@@ -3,7 +3,7 @@
     <div class="navHeader">
       <nav class="nav notVisibleOnMobile">
         <g-image
-          src="~/assets/icons/logo (1).png"
+          src="~/assets/icons/staFull.png"
           width="50px"
           height="50px"
           fit="outside"
@@ -55,6 +55,7 @@ export default {
     }
   }
 };
+
 </script>
 
 <style>
