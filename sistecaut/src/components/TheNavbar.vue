@@ -3,6 +3,7 @@
     <div class="navHeader">
       <nav class="nav notVisibleOnMobile">
         <g-image
+          alt="STAlogo"
           src="~/assets/icons/staFull.png"
           width="50px"
           height="50px"
@@ -16,19 +17,31 @@
       </nav>
     </div>
     <div :class="'naveSider visibleOnMobile ' + showAnimation">
-      <g-image src="~/assets/icons/logo (1).png" class="navSiderImage" />
+      <g-image
+        alt=""
+        src="~/assets/icons/logo (1).png"
+        class="navSiderImage"
+      />
       <g-link v-on:click="hamburgerClick" class="nav__link" to="/">Home</g-link>
-      <g-link v-on:click="hamburgerClick" class="nav__link " to="/Products">Products</g-link>
+      <g-link v-on:click="hamburgerClick" class="nav__link " to="/Products"
+        >Products</g-link
+      >
       <a v-on:click="hamburgerClick" href="#about" class="nav__link ">About</a>
-      <a v-on:click="hamburgerClick" href="#footer" class="nav__link ">Footer</a>
-      <a v-on:click="hamburgerClick" href="#projects" class="nav__link ">Spotlight</a>
+      <a v-on:click="hamburgerClick" href="#footer" class="nav__link "
+        >Footer</a
+      >
+      <a v-on:click="hamburgerClick" href="#projects" class="nav__link "
+        >Spotlight</a
+      >
     </div>
     <div class="visibleOnMobile">
-      <g-image
+      <HamburgerIcon class="hamburguer" 
+        v-on:click="hamburgerClick" />
+      <!-- <g-image
         v-on:click="hamburgerClick"
         src="~/assets/icons/logo (1).png"
         class="hamburguer"
-      />
+      /> -->
     </div>
     <div class="layout">
       <slot />
@@ -37,11 +50,16 @@
 </template>
 
 <script>
+import HamburgerIcon from "@/assets/svgs/menu.svg";
+
 export default {
+  components: {
+    HamburgerIcon
+  },
   name: "Navbar",
   data() {
     return {
-      showAnimation: "",
+      showAnimation: ""
     };
   },
   methods: {
@@ -55,7 +73,6 @@ export default {
     }
   }
 };
-
 </script>
 
 <style>
