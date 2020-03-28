@@ -4,10 +4,12 @@
       v-on:click="handlePreviousClick"
       class="arrowButtons buttonPrevious"
     >
-      &lt; <!-- symbol for the less than char (<) -->
+      &lt;
+      <!-- symbol for the less than char (<) -->
     </button>
     <button v-on:click="handleNextClick" class="arrowButtons buttonNext">
-      &gt; <!-- symbol for the greater than char (>) -->
+      &gt;
+      <!-- symbol for the greater than char (>) -->
     </button>
     <div
       v-for="(slide, index) in slides"
@@ -16,7 +18,11 @@
       class="carouselSlider"
       :style="{ zIndex: slides.length - index }"
     >
-      <CarouselContent :title="slide.title" :imgSource="slide.img" :subtitle="slide.subtitle" />
+      <CarouselContent
+        :title="slide.title"
+        :imgSource="slide.img"
+        :bodyContent="slide.bodyContent"
+      />
     </div>
   </div>
 </template>
@@ -26,18 +32,21 @@ let current = 0;
 const slides = [
   {
     id: "slider0",
-    title: "This is the first slide",
-    subtitle: "THIS IS A SUBTITLE",
-    img: "myImg.jpg"
+    title: "Missão",
+    bodyContent: ["Analisar, projetar e desenvolver conceitos e soluções inovadoras no mercado industrial, com elevada competência e qualidade. Atuar nos mercados superando as expetativas do cliente e requisitos contratados.", "Prestar apoio após venda associado às atividades acima descritas."],
+    img: "man-in-black-shirt-sitting-in-front-of-computer-3861959.jpg"
   },
   {
     id: "slider1",
-    title: "This is the second slide",
+    title: "Competências",
+    bodyContent: ["Para poder inovar no mercado privilegia o conhecimento, o empreendedorismo e a criatividade.", "Dispõe de competências profissionais de engenharia, produção e serviços, nas áreas: mecânica, pneumática, hidráulica, eletrotécnica, tecnologias de informação e computação.", "É estratégia da Sistecaut, Lda apresentar conceitos e soluções inovadoras, visando a melhoria de eficiência de processos e soluções."],
     img: "myImgMechanical.jpg"
   },
   {
     id: "slider2",
-    title: "This is the third slide"
+    title: "Mercados",
+    bodyContent: ["O nosso conhecimento, capacidade e flexibilidade, são valores reconhecidos nos diversos mercados onde atuamos, especificamente no mercado automóvel.", "Para estes desenvolvemos máquinas especiais, sistemas de fabrico, de inspeção e controlo.", "Participamos também noutros sectores como parceiros, desenvolvendo sistemas de controlo e monitorização de processo dedicados e abertos.", "Analisamos necessidades e apresentamos também soluções aos mercados no campo da manutenção e remodelação de sistemas existentes."],
+    img: "engineerDesigningTheme.jpg"
   }
 ];
 
@@ -169,5 +178,4 @@ export default {
     height: 90vh;
   }
 }
-
 </style>
