@@ -8,25 +8,3 @@ html {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
-#section1 {
-  background-color: pink;
-  height: 95vh;
-  padding: 5vh 5vw 5vh 5vw;
-  width: 90vw;
-}
-
-#section2 {
-  background-color: yellow;
-  height: 95vh;
-  padding-top: 5vh;
-  padding: 5vh 5vw 5vh 5vw;
-  width: 90vw;
-}
-
-@media (min-width: 1025px) {
-  #section1,
-  #section2 {
-    height: 90vh;
-  }
-}
