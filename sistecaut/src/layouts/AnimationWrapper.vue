@@ -8,13 +8,16 @@
 export default {
   name: "AnimationWrapper",
   props: ["currentPage", "direction"],
-  watch: {
-    currentPage: function(newVal, oldVal) {
-      // watch it
-      console.log("Prop changed: ", newVal, " | was: ", oldVal);
-    }
+  // watch: {
+  //   currentPage: {
+  //     immediate: true,
+  //     deep: true,
+  //     handler(newValue, oldValue) {
+  //       console.log("new = ", newValue)
+  //     }
+  //   }
+  // },
   }
-};
 </script>
 
 <style></style>
