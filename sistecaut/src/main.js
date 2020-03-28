@@ -9,7 +9,11 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 // The Client API can be used here.
 export default function (Vue, { router, head, isClient }) {
-
+  // Using CDN Fonts (Typekit, Google Fonts, etc)
+  head.link.push({
+    rel: 'stylesheet',
+    href: 'https://fonts.googleapis.com/css?family=Roboto'
+  })
   // Set default layout as a global component
   Vue.component('Layout', DefaultLayout)
 }
