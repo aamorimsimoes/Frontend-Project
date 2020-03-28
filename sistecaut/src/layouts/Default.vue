@@ -28,10 +28,22 @@ export default {
 <style>
 
 @font-face {
+  font-family: Geomanist-Complete-Desktop;
+  src: url("../assets/fonts/Geomanist-Bold.otf");
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Geomanist-Complete-Desktop;
+  src: url("../assets/fonts/Geomanist-ExtraLight.otf");
+  font-weight: lighter;
+}
+
+/* @font-face {
   font-family: Iosevka Term Nerd Font Complete;
   src: url("../assets/fonts/Iosevka Term Nerd Font Complete.ttf");
   font-weight: normal;
-}
+} */
 
 body {
   font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
