@@ -21,7 +21,6 @@ export default {
   },
   components: {
     Navbar,
-    // ToggleTheme
   }
 };
 </script>
