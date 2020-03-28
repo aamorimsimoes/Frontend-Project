@@ -1,7 +1,7 @@
 <template>
   <div id="projects">
     <div :key="project.title" v-for="project in projects" class="project">
-      <img id="spotlightImg" :src="require(`../assets/img/${project.img}`)" />
+      <g-image :alt="project.title" id="spotlightImg" :src="require(`../assets/img/${project.img}`)" />
     </div>
   </div>
 </template>
