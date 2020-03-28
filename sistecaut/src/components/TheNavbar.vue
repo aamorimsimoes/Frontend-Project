@@ -5,8 +5,8 @@
         <g-image
           alt="STAlogo"
           src="~/assets/icons/staFull.png"
-          width="50px"
-          height="50px"
+          width="75px"
+          height="75px"
           fit="outside"
         />
         <g-link class="nav__link" to="/">Home</g-link>
@@ -16,6 +16,8 @@
         <a href="#projects" class="nav__link">Spotlight</a>
       </nav>
     </div>
+
+    <!-- hamburguerIcon navBar mobile view -->
     <div :class="'naveSider visibleOnMobile ' + showAnimation">
       <g-image
         alt=""
@@ -78,16 +80,16 @@ export default {
 <style>
 a:link {
   text-decoration: none;
-  font-size: 20px;
-  color: black;
+  font-size: 30px;
+  color: black; 
 }
+/* show nav__link always black */
 a:visited {
   text-decoration: none;
   color: black;
 }
 a:hover {
-  text-decoration: underline;
-  color: black;
+  color: #f08013;
 }
 a:active {
   text-decoration: none;
@@ -96,7 +98,6 @@ a:active {
 
 .navHeader {
   display: flex;
-  font-family: Iosevka Term Nerd Font Complete;
   justify-content: space-around;
   text-align: center;
   z-index: 9999;
@@ -163,6 +164,11 @@ a:active {
   width: 50px;
   padding-top: 8vh;
   align-self: center;
+}
+
+.nav__link {
+  font-family: Geomanist-Complete-Desktop;
+  font-weight: bold;
 }
 
 @media (min-width: 1025px) {
