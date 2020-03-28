@@ -1,19 +1,13 @@
 <template>
   <div class="carouselContent">
-    <div
-      class="imagePart handleImage"
-      :style="
-        imgSource
-          ? {
-              backgroundImage:
-                'url(' + require(`@/assets/img/${imgSource}`) + ')'
-            }
-          : {}
-      "
-    />
+    <div class="imagePart">
+      <g-image :src="require(`@/assets/img/carouselSelection/${imgSource}`)" class="handleImage" />
+    </div>
     <div class="textPart">
-      <h2 class="carouselInfo">{{ title }}</h2>
-      <h4 class="carouselInfo">{{ subtitle }}</h4>
+      <h2 class="carouselInfoTitle">{{ title }}</h2>
+      <h4 class="carouselInfoBody" v-for="(text, index) in bodyContent" 
+      :key="`${title}_${index}`">{{text}}</h4>
+      <!-- <h4 class="carouselInfoBody">{{ bodyContent }}</h4> -->
     </div>
     <!-- <img
       class="carouselImage handleImage"
@@ -27,7 +21,7 @@
 <script>
 export default {
   name: "CarouselContent",
-  props: ["title", "imgSource", "subtitle"]
+  props: ["title", "imgSource", "bodyContent"]
 };
 </script>
 
@@ -39,7 +33,7 @@ export default {
   background-color: white;
 }
 
-.carouselInfo {
+.textPart {
   color: black;
   text-align: center;
   z-index: 100;
@@ -53,9 +47,11 @@ export default {
 .handleImage {
   background-position: center;
   background-size: cover;
+  height: 100%;
   object-fit: cover;
   object-position: right;
   overflow: hidden;
+  width: 100%;
 }
 
 .imagePart {
@@ -66,4 +62,20 @@ export default {
   width: 40%;
   height: 100%;
 }
+
+.carouselInfoTitle {
+  font-family: Roboto;
+  margin-left: 2rem;
+  margin-right: 5rem;
+  padding: 1rem;
+}
+
+.carouselInfoBody {
+  text-align: justify;
+  font-family: Roboto;
+  margin-left: 2rem;
+  margin-right: 5rem;
+  padding: 1rem;
+}
+
 </style>
