@@ -1,7 +1,14 @@
-// // Default variables
-// html {
-//   --base-font-size: 20px;
-// }
+// Default variables
+:root {
+  --bg-color: #dfa7a7;
+  --main-font-family: Geomanist-Complete-Desktop;
+  --font-weight: lighter;
+  --title-font-size: 50px;
+  --base-font-size: 20px;
+
+  // color palette
+  --orange-color: #f08013;
+}
 
 // // Light default theme
 // body {
