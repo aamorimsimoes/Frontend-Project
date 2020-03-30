@@ -1,50 +1,22 @@
 <template>
   <div>
-    <div class="navHeader">
-      <nav class="nav notVisibleOnMobile">
-        <g-image
-          alt="STAlogo"
-          src="~/assets/icons/staFull.png"
-          width="75px"
-          height="75px"
-          fit="outside"
-        />
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/Products">Products</g-link>
-        <a href="#about" class="nav__link">About</a>
-        <a href="#footer" class="nav__link">Footer</a>
-        <a href="#projects" class="nav__link">Spotlight</a>
-      </nav>
+    <!-- Navbar for the Desktop View -->
+    <div class="navHeader notVisibleOnMobile">
+      <!-- <nav class="nav notVisibleOnMobile"> -->
+      <NavbarLinks />
     </div>
 
-    <!-- hamburguerIcon navBar mobile view -->
-    <div :class="'naveSider visibleOnMobile ' + showAnimation">
-      <g-image
-        alt=""
-        src="~/assets/icons/logo (1).png"
-        class="navSiderImage"
-      />
-      <g-link v-on:click="hamburgerClick" class="nav__link" to="/">Home</g-link>
-      <g-link v-on:click="hamburgerClick" class="nav__link " to="/Products"
-        >Products</g-link
-      >
-      <a v-on:click="hamburgerClick" href="#about" class="nav__link ">About</a>
-      <a v-on:click="hamburgerClick" href="#footer" class="nav__link "
-        >Footer</a
-      >
-      <a v-on:click="hamburgerClick" href="#projects" class="nav__link "
-        >Spotlight</a
-      >
-    </div>
+    <!-- Navbar for the Mobile View -->
     <div class="visibleOnMobile">
-      <HamburgerIcon class="hamburguer" 
-        v-on:click="hamburgerClick" />
-      <!-- <g-image
-        v-on:click="hamburgerClick"
-        src="~/assets/icons/logo (1).png"
-        class="hamburguer"
-      /> -->
+      <HamburgerIcon class="hamburguer" v-on:click="hamburgerClick" />
     </div>
+
+    <!-- Menu that opens on hamburguer click -->
+    <div :class="'naveSider visibleOnMobile ' + showAnimation">
+      <NavbarLinks />
+    </div>
+
+    <!-- Layout Component (and its children) -->
     <div class="layout">
       <slot />
     </div>
@@ -52,10 +24,12 @@
 </template>
 
 <script>
+import NavbarLinks from "./NavbarLinks";
 import HamburgerIcon from "@/assets/svgs/menu.svg";
 
 export default {
   components: {
+    NavbarLinks,
     HamburgerIcon
   },
   name: "Navbar",
@@ -78,24 +52,6 @@ export default {
 </script>
 
 <style>
-a:link {
-  text-decoration: none;
-  font-size: 30px;
-  color: black; 
-}
-/* show nav__link always black */
-a:visited {
-  text-decoration: none;
-  color: black;
-}
-a:hover {
-  color: #f08013;
-}
-a:active {
-  text-decoration: none;
-  color: black;
-}
-
 .navHeader {
   display: flex;
   justify-content: space-around;

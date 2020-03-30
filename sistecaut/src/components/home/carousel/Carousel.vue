@@ -1,16 +1,24 @@
 <template>
   <div class="carouselViewport">
-    <button
+    <ArrowLeft 
+      v-on:click="handlePreviousClick" 
+      class="arrowButtons buttonPrevious" 
+    />
+    <ArrowRight 
+      v-on:click="handleNextClick" 
+      class="arrowButtons buttonNext" 
+    />
+    <!-- <button
       v-on:click="handlePreviousClick"
       class="arrowButtons buttonPrevious"
     >
-      &lt;
+      &lt; -->
       <!-- symbol for the less than char (<) -->
-    </button>
-    <button v-on:click="handleNextClick" class="arrowButtons buttonNext">
+    <!-- </button> -->
+    <!-- <button v-on:click="handleNextClick" class="arrowButtons buttonNext">
       &gt;
-      <!-- symbol for the greater than char (>) -->
-    </button>
+      <! symbol for the greater than char (>) -->
+    <!-- </button> -->
     <div
       v-for="(slide, index) in slides"
       :key="slide.id"
@@ -103,6 +111,8 @@ function handleArrowClick(direction) {
 }
 
 import CarouselContent from "./CarouselContent";
+import ArrowLeft from "@/assets/svgs/chevron-left.svg";
+import ArrowRight from "@/assets/svgs/chevron-right.svg";
 
 export default {
   name: "Carousel",
@@ -120,7 +130,9 @@ export default {
     }
   },
   components: {
-    CarouselContent
+    CarouselContent,
+    ArrowLeft,
+    ArrowRight
   }
 };
 </script>

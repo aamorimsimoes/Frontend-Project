@@ -1,6 +1,6 @@
 <template>
-  <div id="about">
-    <h1>ABOUT US</h1>
+  <div class="about">
+    <h1>SISTECAUT Lda.</h1>
     <p>
       A Sistecaut Lda foi criada em novembro de 2003, tem sede em Aveiro e está
       focalizada no fornecimento de máquinas especiais e soluções de automação.
@@ -46,16 +46,17 @@ export default {
   every single one, but you can get hints by changing these attributes
   at the inspect of the page 
   */
-#about {
-  background-color: lightgray;
-  width: 90vw;
-  height: 95vh;
-  padding: 5vh 5vw 5vh 5vw;
+.about {
+  font-family: var(--main-font-family);
+  
+  width: var(--desktop-width);
+  height: var(--desktop-heigth);
+  padding: var(--desktop-padding);
 }
 
-@media (min-width: 1025px) {
+/* @media (min-width: 1025px) {
   #about {
     height: 80vh;
   }
-}
+} */
 </style>
