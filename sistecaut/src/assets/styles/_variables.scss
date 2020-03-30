@@ -1,13 +1,24 @@
 // Default variables
 :root {
-  --bg-color: #dfa7a7;
-  --main-font-family: Geomanist-Complete-Desktop;
-  --font-weight: lighter;
-  --title-font-size: 50px;
+  // font properties
   --base-font-size: 20px;
+  --font-weight: lighter;
+  --main-font-family: Geomanist-Complete-Desktop;
+  --title-font-size: 50px;
 
-  // color palette
+  // color palette Sistecaut
+  --grey-color: #56565a;
   --orange-color: #f08013;
+  // general colors
+  --bg-color: #dfa7a7;
+
+  // desktop component dimensions
+  --desktop-width: 90vw;
+  --desktop-height: 80vh;
+  --desktop-padding: 5vh 5vw 5vh 5vw;
+  // tablet component dimensions
+
+  // mobile component dimensions
 }
 
 // // Light default theme
