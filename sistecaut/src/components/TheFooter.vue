@@ -66,7 +66,10 @@
         </ul>
       </div>
     </div>
-    <span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a></span>
+    <div>
+      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
+      <span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a></span>
+    </div>
   </div>
 </template>
 
@@ -106,6 +109,7 @@ export default {
   }
 }
 
+// flex box application 
 .item {
   // width: 100px;
   color: black;
