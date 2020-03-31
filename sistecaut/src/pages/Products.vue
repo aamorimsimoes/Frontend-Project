@@ -6,35 +6,28 @@
       :currentPage="currentPage"
       :setCurrentPage="setCurrentPage"
     >
-      <div id="productsAnimated_0" v-if="currentPage === 0" class="initialSize">
-        <div class="sizing">
-          <h1>
-            <FormattedMessage id="product.title" />
-          </h1>
-          <form v-on:change="handleLanguageChange">
-            <p>Please select your language:</p>
-            <input
-              type="radio"
-              id="portuguese"
-              name="language"
-              value="portuguese"
-            />
-            <label for="portuguese">Portugues</label><br />
-            <input type="radio" id="english" name="language" value="english" />
-            <label for="english">English</label><br />
-          </form>
-        </div>
-      </div>
-      <div id="productsAnimated_1" v-if="currentPage === 1" class="initialSize">
-        <div class="sizing">
-          <h1>Component Number 1</h1>
-        </div>
-      </div>
-      <div id="productsAnimated_2" v-if="currentPage === 2" class="initialSize">
-        <div class="sizing">
-          <h1>Component Number 2</h1>
-        </div>
-      </div>
+      <RobotisedCells
+        id="productsAnimated_0"
+        v-if="currentPage === 0"
+        class="initialSize"
+      />
+      <SpecialMachines
+        id="productsAnimated_1"
+        v-if="currentPage === 1"
+        class="initialSize"
+      />
+
+      <ElectricalServices
+        id="productsAnimated_2"
+        v-if="currentPage === 2"
+        class="initialSize"
+      />
+
+      <MachiningServices
+        id="productsAnimated_3"
+        v-if="currentPage === 3"
+        class="initialSize"
+      />
     </AnimationWrapper>
   </Layout>
 </template>
@@ -44,6 +37,10 @@ import Layout from "../layouts/Default";
 import AnimationWrapper from "../layouts/AnimationWrapper";
 import FormattedMessage from "../languageProvider/FormattedMessage";
 import LanguageProvider from "../languageProvider/LanguageProvider";
+import RobotisedCells from "../components/products/TheRobotisedCells";
+import SpecialMachines from "../components/products/TheSpecialMachines";
+import ElectricalServices from "../components/products/TheElectricalServices";
+import MachiningServices from "../components/products/TheMachiningServices";
 
 export default {
   name: "Products",
@@ -51,11 +48,15 @@ export default {
     Layout,
     AnimationWrapper,
     FormattedMessage,
-    LanguageProvider
+    LanguageProvider,
+    RobotisedCells,
+    SpecialMachines,
+    ElectricalServices,
+    MachiningServices
   },
   data() {
     return {
-      nPages: 3, // number of available pages
+      nPages: 4, // number of available pages
       currentPage: 0 // current page showing
     };
   },
@@ -75,16 +76,10 @@ export default {
 </script>
 
 <style lang="scss">
-.sizing {
-  height: 90vh;
-  width: 100%;
-  margin-top: 5vh;
-  text-align: center;
-}
-
 .initialSize {
   transition: .5s ease-in-out;
   transform: scale(.75);
   opacity: 0;
+  border: black solid 2px;
 }
 </style>
