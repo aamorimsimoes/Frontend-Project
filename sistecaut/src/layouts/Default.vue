@@ -1,7 +1,13 @@
 <template>
-  <Navbar>
-    <slot />
-  </Navbar>
+  <LanguageProvider>
+    <LoadingWrapper
+      :class="loading ? 'shownDisplay' : 'hiddenDisplay'"
+      v-if="loading"
+    />
+    <Navbar :class="loading ? 'hiddenDisplay' : 'shownDisplay'">
+      <slot />
+    </Navbar>
+  </LanguageProvider>
 </template>
 
 <static-query>
@@ -13,20 +19,33 @@ query {
 </static-query>
 
 <script>
-import Navbar from "../components/TheNavbar";
+import Navbar from "../components/navbar/TheNavbar";
+import LoadingWrapper from "./LoadingWrapper";
+import LanguageProvider from "../languageProvider/LanguageProvider";
 
 export default {
   metaInfo: {
     title: "Sistecaut, Lda"
   },
+  data() {
+    return {
+      loading: true,
+    };
+  },
   components: {
     Navbar,
+    LoadingWrapper,
+    LanguageProvider
+  },
+  created() {
+    setTimeout(() => {
+      this.loading = false;
+    }, 2000);
   }
 };
 </script>
 
 <style>
-
 @font-face {
   font-family: Geomanist-Complete-Desktop;
   src: url("../assets/fonts/Geomanist-Bold.otf");
@@ -52,5 +71,13 @@ body {
 
 .bigTemplate {
   display: block;
+}
+
+.hiddenDisplay {
+  display: none;
+}
+
+.shownDisplay {
+  display: initial;
 }
 </style>
