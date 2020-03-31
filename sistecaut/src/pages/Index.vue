@@ -1,81 +1,75 @@
 <template>
   <Layout>
-    <!-- <button
-      v-if="currentPage > 0"
-      v-on:click="handlePreviousClick"
-      class="slideButtons slideUp"
-    > -->
-    <ArrowUp
-      class="slideButtons slideUp"
-      v-on:click="handlePreviousClick"
-      v-if="currentPage > 0"
-    />
-    <!-- </button> -->
-    <!-- <button
-      v-if="currentPage < nPages - 1"
-      v-on:click="handleNextClick"
-      class="slideButtons slideDown"
-    > -->
-    <ArrowDown
-      class="slideButtons slideDown"
-      v-on:click="handleNextClick"
-      v-if="currentPage < nPages - 1"
-    />
-    <!-- </button> -->
-    <AnimationWrapper currentPage="currentPage" direction="direction">
-      <Carousel v-if="currentPage === 0" />
-      <About v-else-if="currentPage === 1" />
-      <Spotlight v-else-if="currentPage === 2" />
-      <Footer v-else-if="currentPage === 3" />
+    <AnimationWrapper
+      idStart="indexAnimated"
+      :nPages="nPages"
+      :currentPage="currentPage"
+      :setCurrentPage="setCurrentPage"
+    >
+      <Carousel
+        id="indexAnimated_0"
+        v-if="currentPage === 0"
+        class="initialSize"
+      />
+      <About
+        id="indexAnimated_1"
+        v-else-if="currentPage === 1"
+        class="initialSize"
+      />
+      <Spotlight
+        id="indexAnimated_2"
+        class="initialSize"
+        v-else-if="currentPage === 2"
+      />
+      <Footer
+        id="indexAnimated_3"
+        class="initialSize"
+        v-else-if="currentPage === 3"
+      />
     </AnimationWrapper>
   </Layout>
 </template>
 
 <script>
-import Carousel from "@/components/carousel/Carousel";
-import Spotlight from "@/components/TheSpotlight";
-import Footer from "@/components/TheFooter";
-import About from "@/components/TheAbout";
-import Layout from "@/layouts/Default";
-import AnimationWrapper from "@/layouts/AnimationWrapper";
-import ArrowUp from "@/assets/svgs/chevrons-up.svg";
-import ArrowDown from "@/assets/svgs/chevrons-down.svg";
+import Carousel from "../components/home/carousel/Carousel";
+import Spotlight from "../components/home/TheSpotlight";
+import Footer from "../components/TheFooter";
+import About from "../components/home/TheAbout";
+import Layout from "../layouts/Default";
+import AnimationWrapper from "../layouts/AnimationWrapper";
 
 export default {
   components: {
-    // insert here the name of the component
     Carousel,
     Spotlight,
     Footer,
     About,
     Layout,
-    AnimationWrapper,
-    ArrowUp,
-    ArrowDown
+    AnimationWrapper
   },
   name: "Sistecaut",
   data() {
     return {
       nPages: 4, // number of pages available
-      currentPage: 0, // current page showing
-      scrolling: false // flag that enables the scrolling
+      currentPage: 0 // current page showing
     };
   },
   methods: {
-    handlePreviousClick: function() {
-      if (this.currentPage > 0) {
-        this.currentPage--;
-      } else {
-        this.currentPage = 0;
-      }
-    },
-    handleNextClick: function() {
-      if (this.currentPage < this.nPages - 1) {
-        this.currentPage++;
-      } else {
-        this.currentPage = this.nPages - 1;
-      }
+    // updates the current page
+    setCurrentPage: function(updated) {
+      this.currentPage = updated;
     }
+    // handleSliderClick: function(pageNumber) {
+    //   this.scrolling = true;
+    //   this.nextPage = pageNumber;
+    // },
+  },
+  created() {
+    setTimeout(() => {
+      const initialComponent = document.getElementById("indexAnimated_0");
+      initialComponent.style.transform = "scale(1)";
+      initialComponent.style.opacity = "1";
+    }, 1000);
   }
 };
 </script>
@@ -85,33 +79,37 @@ export default {
   margin-right: .1rem;
 }
 
-.slideButtons {
-  z-index: 99;
-  position: absolute;
-  left: .2vw;
-  color: white;
-  /* background-color: rgba(255, 183, 0, .5); */
-  height: 10vh;
-  width: 10vh;
-  border-radius: 10vh;
-  border: none;
-  font-weight: lighter;
-  font-size: larger;
-}
+// .sliderColumn {
+//   position: absolute;
+//   top: 10vh;
+//   left: 0;
+//   width: 8vw;
+//   height: 90vh;
+//   background-color: #f08013;
+//   z-index: 99;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: space-around;
+//   text-align: center;
+//   align-content: center;
+// }
 
-.slideButtons:focus {
-  outline: none;
-}
+// .sliderLinks {
+//   color: white;
+//   cursor: pointer;
+// }
 
-.slideButtons:hover {
-  background-color: rgba(255, 183, 0, 1);
-}
+// .sliderLinks:hover {
+//   filter: drop-shadow(8px 8px 5px gray);
+// }
 
-.slideUp {
-  top: 15vh;
-}
+// .sliderLinksSelected {
+//   border-bottom: 5px solid white;
+// }
 
-.slideDown {
-  bottom: 5vh;
+.initialSize {
+  transition: .5s ease-in-out;
+  transform: scale(.75);
+  opacity: 0;
 }
 </style>
