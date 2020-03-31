@@ -42,19 +42,19 @@ const slides = [
     id: "slider0",
     title: "Missão",
     bodyContent: ["Analisar, projetar e desenvolver conceitos e soluções inovadoras no mercado industrial, com elevada competência e qualidade. Atuar nos mercados superando as expetativas do cliente e requisitos contratados.", "Prestar apoio após venda associado às atividades acima descritas."],
-    img: "man-in-black-shirt-sitting-in-front-of-computer-3861959.jpg"
+    img: "ideasWhiteboard.jpg"
   },
   {
     id: "slider1",
     title: "Competências",
     bodyContent: ["Para poder inovar no mercado privilegia o conhecimento, o empreendedorismo e a criatividade.", "Dispõe de competências profissionais de engenharia, produção e serviços, nas áreas: mecânica, pneumática, hidráulica, eletrotécnica, tecnologias de informação e computação.", "É estratégia da Sistecaut, Lda apresentar conceitos e soluções inovadoras, visando a melhoria de eficiência de processos e soluções."],
-    img: "myImgMechanical.jpg"
+    img: "engineersAtWork.jpg"
   },
   {
     id: "slider2",
     title: "Mercados",
     bodyContent: ["O nosso conhecimento, capacidade e flexibilidade, são valores reconhecidos nos diversos mercados onde atuamos, especificamente no mercado automóvel.", "Para estes desenvolvemos máquinas especiais, sistemas de fabrico, de inspeção e controlo.", "Participamos também noutros sectores como parceiros, desenvolvendo sistemas de controlo e monitorização de processo dedicados e abertos.", "Analisamos necessidades e apresentamos também soluções aos mercados no campo da manutenção e remodelação de sistemas existentes."],
-    img: "engineerDesigningTheme.jpg"
+    img: "femaleEngineer.jpg"
   }
 ];
 
