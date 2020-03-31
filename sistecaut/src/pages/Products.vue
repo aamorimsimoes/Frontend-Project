@@ -80,6 +80,5 @@ export default {
   transition: .5s ease-in-out;
   transform: scale(.75);
   opacity: 0;
-  border: black solid 2px;
 }
 </style>
