@@ -3,3 +3,9 @@
   min-height: 50vh;
   width: 100%;
 }
+
+.generalDimensions {
+  width: var(--desktop-width);
+  height: var(--desktop-heigth);
+  padding: var(--desktop-padding);
+}
