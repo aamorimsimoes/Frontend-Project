@@ -52,7 +52,7 @@ export default {
     return {
       nPages: 3, // number of available pages
       currentPage: 0, // current page showing
-      currentLocation: window.location.pathname
+      currentLocation: this.$router.history.current.path
     };
   }
 };
