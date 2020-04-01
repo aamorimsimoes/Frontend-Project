@@ -1,17 +1,17 @@
 <template>
-  <div class="generalDimensions">
-    <Card
-      v-for="card in news"
+  <div class="generalDimensions productElectrical">
+    <Card 
+      v-for="(card) in products" 
       :key="card.id"
       :title="card.title"
-      :bodyContent="card.bodyContent"
+      :bodyContent="card.bodyContent" 
       :imgSource="card.imgSource"
     />
   </div>
 </template>
 
 <script>
-import Card from "~/components/general/ReusableCard";
+import Card from "~/components/general/ReusableCard"
 
 export default {
   name: "ElectricalServices",
@@ -20,25 +20,27 @@ export default {
   },
   data() {
     return {
-      news: [
+      products: [
         {
-          imgSource: "news/beachPollution.jpg",
-          id: "title00",
-          title: "",
-          bodyContent: [],
+          imgSource: "",
+          id: "electrical00",
+          title: "Serviços Elétricos",
+          bodyContent: ["A Sistecaut, Sistemas Técnicos de Automação, Lda desenvolve e integra quadros elétricos de controlo ou potencia de acordo com as necessidades específicas de cada indústria ou processo, visando aumentar a eficiência dos mesmos, garantindo um elevado nível de qualidade do produto e retorno do investimento. Dispõe de um corpo técnico apto a desenvolver, testar e integrar, diversos componentes e funcionalidades de acordo os requisitos identificados, assim como, posteriormente a programar e formar os operadores , garantindo bom uso dos equipamentos."],
         },
         {
-          imgSource: "news/pme-excelencia.jpg",
-          id: "title01",
-          title: "Sistecaut Lda. destacada com prémio PME Excelência",
-          bodyContent: [
-            "A Sistecaut Lda. foi destacada no ano de 2018 com o estatuto de PME Excelência, que evidencia o desempenho e competência da gestão, alicerçados numa estratégia de crescimento sustentado e suportada em sólidos indicadores económicos e financeiros."
-          ]
+          imgSource: "",
+          id: "electrical01",
+          title: "",
+          bodyContent: []
         }
       ]
     };
   }
-};
+}
 </script>
 
-<style lang="scss"></style>>
+<style lang="scss">
+  .productElectrical {
+    background-color: lightblue;
+  }  
+</style>>
