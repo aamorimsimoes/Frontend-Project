@@ -1,9 +1,9 @@
 <template>
   <LanguageProvider>
-    <LoadingWrapper
+    <!-- <LoadingWrapper
       :class="loading ? 'shownDisplay' : 'hiddenDisplay'"
       v-if="loading"
-    />
+    /> -->
     <Navbar :class="loading ? 'hiddenDisplay' : 'shownDisplay'">
       <slot />
     </Navbar>
@@ -20,28 +20,28 @@ query {
 
 <script>
 import Navbar from "../components/navbar/TheNavbar";
-import LoadingWrapper from "./LoadingWrapper";
+// import LoadingWrapper from "./LoadingWrapper";
 import LanguageProvider from "../languageProvider/LanguageProvider";
 
 export default {
   metaInfo: {
     title: "Sistecaut, Lda"
   },
-  data() {
-    return {
-      loading: true,
-    };
-  },
+  // data() {
+  //   return {
+  //     loading: true
+  //   };
+  // },
   components: {
     Navbar,
     LoadingWrapper,
     LanguageProvider
-  },
-  created() {
-    setTimeout(() => {
-      this.loading = false;
-    }, 2000);
   }
+  // created() {
+  //   setTimeout(() => {
+  //     this.loading = false;
+  //   }, 2000);
+  // }
 };
 </script>
 
