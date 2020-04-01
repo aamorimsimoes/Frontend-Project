@@ -55,13 +55,13 @@ export default {
 .navHeader {
   display: flex;
   justify-content: space-around;
-  text-align: center;
+
   z-index: 9999;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  height: 50px;
+  height: 5vh;
   transition: 1s ease-in-out;
   background-color: white;
 }
@@ -99,8 +99,8 @@ export default {
 
 .naveSider {
   height: 100vh;
-  width: 40%;
-  background: grey;
+  width: 50%;
+  background: white;
   z-index: 1000;
   position: fixed;
   top: 5vh;
