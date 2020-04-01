@@ -37,13 +37,17 @@
         to="/Contacts"
         >Contactos</g-link
       >
+      <LanguageSwitcher />
     </div>
   </nav>
 </template>
 
 <script>
+import LanguageSwitcher from "../../languageProvider/LanguageSwitcher";
+
 export default {
   name: "NavbarLinks",
+  components: { LanguageSwitcher },
   data() {
     return {
       nPages: 3, // number of available pages
@@ -61,7 +65,7 @@ export default {
 }
 .STAlinks {
   float: right;
-  padding:2vh 2vh;
+  padding: 2vh 2vh;
 }
 
 .nav__link {

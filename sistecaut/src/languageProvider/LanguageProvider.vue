@@ -1,34 +1,24 @@
 <template>
-  <div>
+  <!-- key changes force update -->
+  <div :key="localeLanguage">
     <slot />
   </div>
 </template>
-
 <script>
-// export function changeLanguage(newLanguage) {
-//   localStorage.setItem("language", newLanguage);
-//   locale = newLanguage;
-// }
+import localStorage from "local-storage";
 export default {
   name: "LanguageProvider",
   data() {
     return {
-      locale: localStorage.getItem("language") || "english"
+      localeLanguage: localStorage.get("language") || "English"
     };
   },
-  methods: {
-    changeLanguage: function(newLanguage) {
-      localStorage.setItem("language", newLanguage);
-      this.locale = newLanguage;
-    }
-  },
-  // watch: {
-  //   locale: {
-  //     immediate: true,
-  //     handler(newValue, oldValue) {
-  //       console.log("languaged changed to ", newValue);
-  //     }
-  //   }
-  // }
+  mounted() {
+    // catches a language change and updates the localLanguage at the local storage and here, to update all components
+    this.$root.$on("languageChange", newLanguage => {
+      localStorage.set("language", newLanguage);
+      this.localeLanguage = newLanguage;
+    });
+  }
 };
 </script>

@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "gridsome": "^0.7.0",
+    "local-storage": "^2.0.0",
     "postcss-scss": "^2.0.0"
   },
   "devDependencies": {

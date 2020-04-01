@@ -1,22 +1,18 @@
 <template>
-  <span>
-    {{ getTranslation(id) }}
-  </span>
+  <span>{{ getTranslation(id) }}</span>
 </template>
-
 <script>
 import MessagesEN from "./EN_en.json";
 import MessagesPT from "./PT_pt.json";
-
+import localStorage from "local-storage";
 export default {
-  name: "LanguageProvider",
+  name: "FormattedMessage",
   props: ["id"],
   methods: {
     getTranslation: function(id) {
-      const currentLanguage = localStorage.getItem("language") || "english";
-
+      const currentLanguage = localStorage.get("language") || "English";
       switch (currentLanguage) {
-        case "portuguese":
+        case "Portuguese":
           return MessagesPT[id];
         default:
           return MessagesEN[id];
