@@ -137,7 +137,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .carouselViewport {
   height: 95vh;
   width: 100%;
@@ -148,11 +148,11 @@ export default {
 .arrowButtons {
   z-index: 99;
   position: absolute;
-  top: 50vh;
-  color: white;
-  background-color: rgba(0, 0, 0, .3);
-  height: 5vh;
-  width: 5vh;
+  top: 40vh;
+  color: black;
+  /* background-color: rgba(0, 0, 0, .3); */
+  height: 7vh;
+  width: 7vh;
   border-radius: 10vh;
   border: none;
   font-weight: lighter;
@@ -164,15 +164,16 @@ export default {
 }
 
 .arrowButtons:hover {
-  background-color: rgba(0, 0, 0, 1);
+  /* background-color: rgba(0, 0, 0, 1); */
+  background-color: rgba(0, 0, 0, .1);
 }
 
 .buttonPrevious {
-  left: 15px;
+  left: 20px;
 }
 
 .buttonNext {
-  right: 15px;
+  right: 20px;
 }
 
 .carouselSlider {

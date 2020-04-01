@@ -33,7 +33,7 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 .carouselContent {
   height: 100%;
   width: 100%;
