@@ -1,6 +1,6 @@
 <template>
   <div class="about">
-    <h1>SISTECAUT Lda.</h1>
+    <span class="STAabout">SISTECAUT Lda.</span>
     <p>
       A Sistecaut Lda foi criada em novembro de 2003, tem sede em Aveiro e está
       focalizada no fornecimento de máquinas especiais e soluções de automação.
@@ -29,6 +29,11 @@
       confiança e responsabilidade, participando em contratos de elevado valor e
       relevância tecnológica.
     </p>
+    <g-image
+      class="bottomImage"
+      src="~/assets/img/grayScale.jpg"
+      alt="aboutImage"
+    />
   </div>
 </template>
 
@@ -41,17 +46,29 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
 /* The sizes definitions can also be strings, you will never know
-  every single one, but you can get hints by changing these attributes
-  at the inspect of the page 
-  */
+every single one, but you can get hints by changing these attributes
+at the inspect of the page */
 .about {
   font-family: var(--main-font-family);
-  
   width: var(--desktop-width);
   height: var(--desktop-heigth);
   padding: var(--desktop-padding);
+}
+
+.STAabout {
+  font-size: 80px;
+}
+
+.bottomImage {
+  width: 90vw;
+  height: 30vh;
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  object-position: right;
+  overflow: hidden;
 }
 
 /* @media (min-width: 1025px) {
