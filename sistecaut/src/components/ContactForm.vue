@@ -63,6 +63,13 @@ export default {
 };
 </script>
 
-<style>
-
+<style lang="scss ">
+.formContact {
+  background-image: url("../assets/img/handHoldingPencil.jpg");
+  background-position: center;
+  background-origin: content-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+}
 </style>
