@@ -6,26 +6,34 @@
       :currentPage="currentPage"
       :setCurrentPage="setCurrentPage"
     >
-      <Carousel
-        id="indexAnimated_0"
+      <BaseComponent
+        ref="indexAnimated_0"
         v-if="currentPage === 0"
         class="initialSize"
-      />
-      <About
-        id="indexAnimated_1"
+      >
+        <Carousel />
+      </BaseComponent>
+      <BaseComponent
+        ref="indexAnimated_1"
         v-else-if="currentPage === 1"
         class="initialSize"
-      />
-      <Spotlight
-        id="indexAnimated_2"
-        class="initialSize"
+      >
+        <About />
+      </BaseComponent>
+      <BaseComponent
+        ref="indexAnimated_2"
         v-else-if="currentPage === 2"
-      />
-      <Footer
-        id="indexAnimated_3"
         class="initialSize"
+      >
+        <Spotlight />
+      </BaseComponent>
+      <BaseComponent
+        ref="indexAnimated_3"
         v-else-if="currentPage === 3"
-      />
+        class="initialSize"
+      >
+        <Footer />
+      </BaseComponent>
     </AnimationWrapper>
   </Layout>
 </template>
@@ -37,6 +45,7 @@ import Footer from "../components/TheFooter";
 import About from "../components/home/TheAbout";
 import Layout from "../layouts/Default";
 import AnimationWrapper from "../layouts/AnimationWrapper";
+import BaseComponent from "../components/general/BaseComponent";
 
 export default {
   components: {
@@ -45,7 +54,8 @@ export default {
     Footer,
     About,
     Layout,
-    AnimationWrapper
+    AnimationWrapper,
+    BaseComponent
   },
   name: "Sistecaut",
   data() {
@@ -66,10 +76,12 @@ export default {
   },
   created() {
     setTimeout(() => {
-      const initialComponent = document.getElementById("indexAnimated_0");
-      initialComponent.style.transform = "scale(1)";
-      initialComponent.style.opacity = "1";
-    }, 1000);
+      const initialComponent = this.$refs["indexAnimated_0"];
+      if (initialComponent && initialComponent.$el) {
+        initialComponent.$el.style.transform = "scale(1)";
+        initialComponent.$el.style.opacity = "1";
+      }
+    }, 1);
   }
 };
 </script>

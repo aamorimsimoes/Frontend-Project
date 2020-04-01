@@ -6,28 +6,34 @@
       :currentPage="currentPage"
       :setCurrentPage="setCurrentPage"
     >
-      <RobotisedCells
-        id="productsAnimated_0"
+      <BaseComponent
+        ref="productsAnimated_0"
         v-if="currentPage === 0"
         class="initialSize"
-      />
-      <SpecialMachines
-        id="productsAnimated_1"
-        v-if="currentPage === 1"
+      >
+        <RobotisedCells />
+      </BaseComponent>
+      <BaseComponent
+        ref="productsAnimated_1"
+        v-else-if="currentPage === 1"
         class="initialSize"
-      />
-
-      <ElectricalServices
-        id="productsAnimated_2"
-        v-if="currentPage === 2"
+      >
+        <SpecialMachines />
+      </BaseComponent>
+      <BaseComponent
+        ref="productsAnimated_2"
+        v-else-if="currentPage === 2"
         class="initialSize"
-      />
-
-      <MachiningServices
-        id="productsAnimated_3"
-        v-if="currentPage === 3"
+      >
+        <ElectricalServices />
+      </BaseComponent>
+      <BaseComponent
+        ref="productsAnimated_3"
+        v-else-if="currentPage === 3"
         class="initialSize"
-      />
+      >
+        <MachiningServices />
+      </BaseComponent>
     </AnimationWrapper>
   </Layout>
 </template>
@@ -41,6 +47,7 @@ import RobotisedCells from "../components/products/TheRobotisedCells";
 import SpecialMachines from "../components/products/TheSpecialMachines";
 import ElectricalServices from "../components/products/TheElectricalServices";
 import MachiningServices from "../components/products/TheMachiningServices";
+import BaseComponent from "../components/general/BaseComponent";
 
 export default {
   name: "Products",
@@ -52,7 +59,8 @@ export default {
     RobotisedCells,
     SpecialMachines,
     ElectricalServices,
-    MachiningServices
+    MachiningServices,
+    BaseComponent
   },
   data() {
     return {
@@ -71,6 +79,15 @@ export default {
     handleLanguageChange: function(e) {
       LanguageProvider.methods.changeLanguage(e.target.value);
     }
+  },
+  created() {
+    setTimeout(() => {
+      const initialComponent = this.$refs["productsAnimated_0"];
+      if (initialComponent && initialComponent.$el) {
+        initialComponent.$el.style.transform = "scale(1)";
+        initialComponent.$el.style.opacity = "1";
+      }
+    }, 1);
   }
 };
 </script>
