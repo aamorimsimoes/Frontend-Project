@@ -4,7 +4,8 @@
       :class="loading ? 'shownDisplay' : 'hiddenDisplay'"
       v-if="loading"
     /> -->
-    <Navbar :class="loading ? 'hiddenDisplay' : 'shownDisplay'">
+    <!-- <Navbar :class="loading ? 'hiddenDisplay' : 'shownDisplay'"> -->
+    <Navbar >
       <slot />
     </Navbar>
   </LanguageProvider>

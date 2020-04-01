@@ -52,9 +52,6 @@ every single one, but you can get hints by changing these attributes
 at the inspect of the page */
 .about {
   font-family: var(--main-font-family);
-  width: var(--desktop-width);
-  height: var(--desktop-heigth);
-  padding: var(--desktop-padding);
 }
 
 .STAabout {
@@ -63,7 +60,7 @@ at the inspect of the page */
 
 .bottomImage {
   width: 90vw;
-  height: 30vh;
+  height: 40vh;
   background-position: center;
   background-size: cover;
   object-fit: cover;

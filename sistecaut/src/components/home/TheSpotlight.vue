@@ -75,7 +75,6 @@ export default {
   // component dimensions
   width: var(--desktop-width);
   height: var(--desktop-height);
-  padding: var(--desktop-padding);
 }
 
 /* 

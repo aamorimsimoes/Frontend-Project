@@ -1,5 +1,5 @@
 <template>
-  <div class="generalDimensions productRobotised">
+  <div class="productRobotised">
     <Card 
       v-for="(card) in products" 
       :key="card.id"

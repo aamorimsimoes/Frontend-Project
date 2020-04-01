@@ -138,8 +138,6 @@ export default {
 
 <style lang="scss">
 .carouselViewport {
-  height: 95vh;
-  width: 100%;
   display: inline-block;
   overflow: hidden;
 }
