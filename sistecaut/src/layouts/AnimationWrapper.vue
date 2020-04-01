@@ -102,11 +102,11 @@ export default {
 .slideButtons {
   z-index: 100;
   position: absolute;
-  color: white;
-  background-color: rgba(0, 0, 0, .3);
-  height: 5vh;
-  width: 5vh;
-  left: 5px;
+  color: black;
+  /* background-color: rgba(0, 0, 0, .2); */
+  height: 7vh;
+  width: 7vh;
+  left: 20px;
   border-radius: 10vh;
   border: none;
   font-weight: lighter;
@@ -118,7 +118,7 @@ export default {
 }
 
 .slideButtons:hover {
-  background-color: var(--grey-color);
+  background-color: rgba(0, 0, 0, .1);
 }
 
 .slideUp {

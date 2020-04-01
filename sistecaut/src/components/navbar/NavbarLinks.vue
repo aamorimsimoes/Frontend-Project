@@ -1,37 +1,43 @@
 <template>
   <nav class="nav notVisibleOnMobile">
     <!-- Logo Image -->
-    <g-image
-      alt="STAlogo"
-      src="~/assets/icons/staFull.png"
-      width="70px"
-      height="70px"
-      fit="outside"
-    />
+    <div class="STAlogo">
+      <g-image
+        alt="STAlogo"
+        src="~/assets/icons/staFull.png"
+        width="70px"
+        height="70px"
+        fit="outside"
+      />
+    </div>
     <!-- Links -->
-    <g-link
-      :class="currentLocation === '/' ? 'nav__link activeNavLink' : 'nav__link'"
-      to="/"
-      >Início</g-link
-    >
-    <g-link
-      :class="
-        currentLocation === '/Products'
-          ? 'nav__link activeNavLink'
-          : 'nav__link'
-      "
-      to="/Products"
-      >Produtos</g-link
-    >
-    <g-link
-      :class="
-        currentLocation === '/Contacts'
-          ? 'nav__link activeNavLink'
-          : 'nav__link'
-      "
-      to="/Contacts"
-      >Contactos</g-link
-    >
+    <div class="STAlinks">
+      <g-link
+        :class="
+          currentLocation === '/' ? 'nav__link activeNavLink' : 'nav__link'
+        "
+        to="/"
+        >Início</g-link
+      >
+      <g-link
+        :class="
+          currentLocation === '/Products'
+            ? 'nav__link activeNavLink'
+            : 'nav__link'
+        "
+        to="/Products"
+        >Produtos</g-link
+      >
+      <g-link
+        :class="
+          currentLocation === '/Contacts'
+            ? 'nav__link activeNavLink'
+            : 'nav__link'
+        "
+        to="/Contacts"
+        >Contactos</g-link
+      >
+    </div>
   </nav>
 </template>
 
@@ -49,6 +55,15 @@ export default {
 </script>
 
 <style>
+.STAlogo {
+  float: left;
+  padding: 8px 2vw;
+}
+.STAlinks {
+  float: right;
+  padding:2vh 2vh;
+}
+
 .nav__link {
   text-decoration: none;
   font-size: 30px;
