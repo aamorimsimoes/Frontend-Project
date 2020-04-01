@@ -63,7 +63,7 @@ export default {
 };
 </script>
 
-<style lang="scss ">
+<style lang="scss">
 .formContact {
   background-image: url("../assets/img/handHoldingPencil.jpg");
   background-position: center;
