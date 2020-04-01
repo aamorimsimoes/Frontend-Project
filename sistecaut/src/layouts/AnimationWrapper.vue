@@ -60,16 +60,10 @@ export default {
       handler(newValue) {
         if (newValue) {
           // get the "old" component
-          const oldComp = document.getElementById(
-            `${this.idStart}_${this.currentPage}`
-          );
-
+          const oldComp = this.$children[0];
           // if the old Component exists
           if (oldComp) {
-            // the old component should execute a fade out with lower scale
-            oldComp.style.opacity = 0;
-            oldComp.style.transform = "scale(0.75)";
-
+            oldComp.handleZoomOut();
             // give the necessary time to the old component to do its animation
             setTimeout(() => {
               // go up or down by setting the proper value to the current page
@@ -85,12 +79,10 @@ export default {
         // gives a little of time to the parent component to render the new component
         setTimeout(() => {
           // get the new Component
-          const newComp = document.getElementById(
-            `${this.idStart}_${newValue}`
-          );
-          // the new component should execute a fade in to the proper scale animation
-          newComp.style.opacity = "1";
-          newComp.style.transform = "scale(1)";
+          const newComp = this.$children[0];
+          if (newComp) {
+            newComp.handleZoomIn();
+          }
         }, 1);
       }
     }
