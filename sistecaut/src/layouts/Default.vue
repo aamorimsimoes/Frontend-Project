@@ -34,7 +34,7 @@ export default {
   // },
   components: {
     Navbar,
-    LoadingWrapper,
+    // LoadingWrapper,
     LanguageProvider
   }
   // created() {
