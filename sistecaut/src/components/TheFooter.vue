@@ -54,41 +54,34 @@
           </li>
         </ul>
       </div>
-      <div class="item">
-        <ul>
-          <li>
-            SISTECAUT Lda.
-          </li>
-          <li>
-            © 2020
-            <!-- search this information according to calendar date (always updated) -->
-          </li>
-        </ul>
-      </div>
+      
     </div>
     <div>
-      <span class="footer__copyright">Copyright © {{ new Date().getFullYear() }}. </span>
-      <span class="footer__links">Powered by <a href="//gridsome.org"> Gridsome </a></span>
+      <!-- search this information according to calendar date (always updated) -->
+      <span class="footer__copyright"
+        >Copyright © {{ new Date().getFullYear() }}.
+      </span>
+      <span class="footer__links"
+        >Powered by <a href="//gridsome.org"> Gridsome </a></span
+      >
     </div>
   </div>
 </template>
 
 <script>
-
-
 export default {
   name: "Footer",
-  components: {
-    
-  }
+  components: {}
 };
 </script>
 
 <style lang="scss">
-@import "~/assets/styles/_components";
+.footerWrapper {
+  background-color: red;
+}
 
 #footer {
-  background-color: #6286a9;
+  // background-color: lightcyan;
   height: 90vh;
   width: 90vw;
   padding: 0vh 5vw 0vh 5vw;
@@ -109,7 +102,7 @@ export default {
   }
 }
 
-// flex box application 
+// flex box application
 .item {
   // width: 100px;
   color: black;
