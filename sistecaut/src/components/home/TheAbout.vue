@@ -2,32 +2,21 @@
   <div>
     <span class="titleSize">SISTECAUT Lda.</span>
     <p>
-      A Sistecaut Lda foi criada em novembro de 2003, tem sede em Aveiro e está
-      focalizada no fornecimento de máquinas especiais e soluções de automação.
+      <FormattedMessage id="about.bodyContent00" />
     </p>
     <p>
-      Apresenta-se no mercado dotada de meios humanos, técnicos e operacionais,
-      para superar as crescentes exigências dos clientes. Consciente dos seus
-      recursos e saber, persegue novos desafios e áreas de ação, numa procura
-      contínua de desenvolvimento sustentado e aumento de valor na cadeia em que
-      participa.
+      <FormattedMessage id="about.bodyContent01" />
     </p>
     <p>
-      Tem capacidade para projetar e construir sistemas por medida, para
-      processo industrial ou automatização do mesmo.
+      <FormattedMessage id="about.bodyContent02" />Tem capacidade para projetar
+      e construir sistemas por medida, para processo industrial ou automatização
+      do mesmo.
     </p>
     <p>
-      Integra as tecnologias mais recentes, tais como robótica, servo
-      acionamentos e visão artificial. O seu conhecimento e capacidade são
-      reconhecidos por alguns parceiros no sector automóvel e de eletrónica, no
-      desenvolvimento de máquinas especiais e sistemas de controlo para os seus
-      processos de fabrico. Participa também no sector alimentar e plásticos,
-      desenvolvendo sistemas de produção, controlo e monitorização de processos.
+      <FormattedMessage id="about.bodyContent03" />
     </p>
     <p>
-      A Sistecaut, Lda tem sido distinguida pelos seus parceiros e clientes com
-      confiança e responsabilidade, participando em contratos de elevado valor e
-      relevância tecnológica.
+      <FormattedMessage id="about.bodyContent04" />
     </p>
     <g-image
       class="fullWidthImage handleImage bottomImage"
@@ -38,10 +27,12 @@
 </template>
 
 <script>
+import FormattedMessage from "../../languageProvider/FormattedMessage";
 export default {
   metaInfo: {
     title: "About Us"
   },
-  name: "About"
+  name: "About",
+  components: { FormattedMessage }
 };
 </script>

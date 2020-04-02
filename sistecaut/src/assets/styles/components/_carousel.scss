@@ -148,7 +148,7 @@
 }
 
 .arrowButtons:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, .1);
 }
 
 .buttonPrevious {
@@ -281,7 +281,7 @@
 .carouselInfoBody {
   font-family: var(--main-font-family);
   font-weight: var(--font-weight);
-  text-align: justify;
+  text-align: left;
 
   font-family: var(--main-font-family);
   font-weight: var(--font-weight);

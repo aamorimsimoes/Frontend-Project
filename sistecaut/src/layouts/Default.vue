@@ -1,14 +1,12 @@
 <template>
-  <LanguageProvider>
-    <!-- <LoadingWrapper
+  <!-- <LoadingWrapper
       :class="loading ? 'shownDisplay' : 'hiddenDisplay'"
       v-if="loading"
     /> -->
-    <!-- <Navbar :class="loading ? 'hiddenDisplay' : 'shownDisplay'"> -->
-    <Navbar >
-      <slot />
-    </Navbar>
-  </LanguageProvider>
+  <!-- <Navbar :class="loading ? 'hiddenDisplay' : 'shownDisplay'"> -->
+  <Navbar>
+    <slot />
+  </Navbar>
 </template>
 
 <static-query>
@@ -22,7 +20,6 @@ query {
 <script>
 import Navbar from "../components/navbar/TheNavbar";
 // import LoadingWrapper from "./LoadingWrapper";
-import LanguageProvider from "../languageProvider/LanguageProvider";
 
 export default {
   metaInfo: {
@@ -34,9 +31,8 @@ export default {
   //   };
   // },
   components: {
-    Navbar,
+    Navbar
     // LoadingWrapper,
-    LanguageProvider
   }
   // created() {
   //   setTimeout(() => {

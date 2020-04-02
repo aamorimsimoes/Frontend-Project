@@ -39,8 +39,9 @@
             : 'navBarTitles'
         "
         to="/"
-        >Início</g-link
       >
+        <FormattedMessage id="navbar.home" />
+      </g-link>
       <g-link
         :class="
           currentLocation === '/Products'
@@ -48,8 +49,9 @@
             : 'navBarTitles'
         "
         to="/Products"
-        >Produtos</g-link
       >
+        <FormattedMessage id="navbar.products" />
+      </g-link>
       <g-link
         :class="
           currentLocation === '/Contacts'
@@ -57,17 +59,19 @@
             : 'navBarTitles'
         "
         to="/Contacts"
-        >Contactos</g-link
       >
+        <FormattedMessage id="navbar.contacts" />
+      </g-link>
       <LanguageSwitcher />
     </div>
   </nav>
 </template>
 <script>
 import LanguageSwitcher from "../../languageProvider/LanguageSwitcher";
+import FormattedMessage from "../../languageProvider/FormattedMessage";
 export default {
   name: "NavbarLinks",
-  components: { LanguageSwitcher },
+  components: { LanguageSwitcher, FormattedMessage },
   data() {
     return {
       nPages: 3, // number of available pages
@@ -77,6 +81,7 @@ export default {
   }
 };
 </script>
+
 <style>
 .STAlogo {
   float: left;

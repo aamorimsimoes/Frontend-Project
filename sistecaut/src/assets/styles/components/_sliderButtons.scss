@@ -80,14 +80,14 @@
   border: none;
   font-weight: lighter;
   font-size: larger;
-  transition: 0.3s ease-in-out;
+  transition: .3s ease-in-out;
 }
 
 .pageSpan {
   left: 1px;
   text-align: center;
   height: fit-content;
-  word-break: break-all;
+  word-break: break-word;
 
   @include for-size(phone-only) {
     width: var(--mobile-page-slider-width);
@@ -156,7 +156,7 @@
 }
 
 .slideButtons:hover {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, .1);
 }
 
 .slideUp {

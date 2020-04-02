@@ -24,8 +24,8 @@ export default {
         {
           imgSource: "",
           id: "electrical00",
-          title: "Serviços Elétricos",
-          bodyContent: ["A Sistecaut, Sistemas Técnicos de Automação, Lda desenvolve e integra quadros elétricos de controlo ou potencia de acordo com as necessidades específicas de cada indústria ou processo, visando aumentar a eficiência dos mesmos, garantindo um elevado nível de qualidade do produto e retorno do investimento. Dispõe de um corpo técnico apto a desenvolver, testar e integrar, diversos componentes e funcionalidades de acordo os requisitos identificados, assim como, posteriormente a programar e formar os operadores , garantindo bom uso dos equipamentos."],
+          title: "products.page.eletricServs",
+          bodyContent: ["products.eletricServs.bodyContent00"],
         },
         {
           imgSource: "",

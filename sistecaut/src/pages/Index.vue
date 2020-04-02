@@ -60,7 +60,12 @@ export default {
   name: "Sistecaut",
   data() {
     return {
-      pageTitles: ["Início", "Sobre", "Spotlight", "Footer"], // pages titles
+      pageTitles: [
+        "navbar.home",
+        "home.page.about",
+        "home.page.news",
+        "navbar.contacts"
+      ], // pages titles
       currentPage: 0 // current page showing
     };
   },

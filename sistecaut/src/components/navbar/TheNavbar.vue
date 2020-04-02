@@ -39,7 +39,6 @@ export default {
   },
   methods: {
     hamburgerClick: function() {
-      console.log("HAMBURGUER CLICK");
       if (this.showAnimation.length > 0) {
         this.showAnimation = "";
       } else {

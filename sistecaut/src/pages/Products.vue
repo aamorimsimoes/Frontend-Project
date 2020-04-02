@@ -42,7 +42,6 @@
 import Layout from "../layouts/Default";
 import AnimationWrapper from "../layouts/AnimationWrapper";
 import FormattedMessage from "../languageProvider/FormattedMessage";
-import LanguageProvider from "../languageProvider/LanguageProvider";
 import RobotisedCells from "../components/products/TheRobotisedCells";
 import SpecialMachines from "../components/products/TheSpecialMachines";
 import ElectricalServices from "../components/products/TheElectricalServices";
@@ -55,7 +54,6 @@ export default {
     Layout,
     AnimationWrapper,
     FormattedMessage,
-    LanguageProvider,
     RobotisedCells,
     SpecialMachines,
     ElectricalServices,
@@ -65,10 +63,10 @@ export default {
   data() {
     return {
       pageTitles: [
-        "RobotisedCells",
-        "SpecialMachines",
-        "ElectricalServices",
-        "MachiningServices"
+        "products.page.robotCells",
+        "products.page.specialMach",
+        "products.page.eletricServs",
+        "products.page.machServs"
       ], // pages titles
       currentPage: 0 // current page showing
     };
@@ -80,9 +78,6 @@ export default {
     },
     getTranslationMethod: function(id) {
       return getTranslation(id);
-    },
-    handleLanguageChange: function(e) {
-      LanguageProvider.methods.changeLanguage(e.target.value);
     }
   },
   created() {

@@ -1,7 +1,7 @@
 <template>
   <div class="languageSelect">
     <span v-on:click="showLanguageOptions" class="spanCurrentLanguage"
-      >{{ localeLanguage }} &#8964;</span
+      ><FormattedMessage id="language" /> &#8964;</span
     >
     <form ref="languageForm" class="languageForm">
       <ul class="optionsContainer">
@@ -16,13 +16,11 @@
   </div>
 </template>
 <script>
-import localStorage from "local-storage";
+import FormattedMessage from "./FormattedMessage";
 export default {
   name: "LanguageSwitcher",
-  data() {
-    return {
-      localeLanguage: localStorage.get("language") || "English"
-    };
+  components: {
+    FormattedMessage
   },
   methods: {
     handleLanguageChange: function(newLanguage) {

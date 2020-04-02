@@ -6,10 +6,10 @@
       v-if="currentPage > 0"
     />
     <div class="slideComponents pageSpan pageSpanUp mobileNot">
-      {{ pageTitles[currentPage - 1] }}
+      <FormattedMessage :id="pageTitles[currentPage - 1]" />
     </div>
     <div class="slideComponents pageSpan pageSpanDown mobileNot">
-      {{ pageTitles[currentPage + 1] }}
+      <FormattedMessage :id="pageTitles[currentPage + 1]" />
     </div>
     <ArrowDown
       class="slideComponents slideButtons slideDown"
@@ -22,11 +22,13 @@
 <script>
 import ArrowUp from "@/assets/svgs/chevrons-up.svg";
 import ArrowDown from "@/assets/svgs/chevrons-down.svg";
+import FormattedMessage from "../languageProvider/FormattedMessage";
 export default {
   name: "AnimationWrapper",
   components: {
     ArrowUp,
-    ArrowDown
+    ArrowDown,
+    FormattedMessage
   },
   props: ["idStart", "pageTitles", "currentPage", "setCurrentPage"],
   data() {
@@ -65,7 +67,8 @@ export default {
       handler(newValue) {
         if (newValue) {
           // get the "old" component
-          const oldComp = this.$children[0];
+          console.log("OLD COMP thi = ", this);
+          const oldComp = this.$children[2];
           // if the old Component exists
           if (oldComp) {
             oldComp.handleZoomOut();
@@ -84,7 +87,7 @@ export default {
         // gives a little of time to the parent component to render the new component
         setTimeout(() => {
           // get the new Component
-          const newComp = this.$children[0];
+          const newComp = this.$children[2];
           if (newComp) {
             newComp.handleZoomIn();
           }

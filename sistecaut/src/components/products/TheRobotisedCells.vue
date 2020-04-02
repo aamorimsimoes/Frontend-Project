@@ -24,8 +24,8 @@ export default {
         {
           imgSource: "",
           id: "robot01",
-          title: "Células Robotizadas",
-          bodyContent: ["A Sistecaut, Sistemas Técnicos de Automação, Lda analisa as necessidades específicas de cada indústria ou processo, verificando onde pode ser aplicada uma solução robotizada para melhoria da produtividade e qualidade do mesmo, garantindo um retorno elevado dos investimentos. Esta tecnologia liberta os meios humanos para tarefas de maior valor acrescentado e garante uma produção estável. A Sistecaut, Lda. dispõe também de um corpo técnico apto a desenvolver, testar, integrar e programar qualquer equipamento, assim como posteriormente a formar os operadores e garantir bom uso dos equipamentos."],
+          title: "products.page.robotCells",
+          bodyContent: ["products.robotCells.bodyContent00"],
         },
         {
           imgSource: "",

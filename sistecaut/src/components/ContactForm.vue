@@ -2,6 +2,7 @@
   <div class="contactWrapper">
     <div class="formContact">
       <form
+        :key="currentLanguage"
         name="contact"
         method="post"
         v-on:submit.prevent="handleSubmit"
@@ -9,16 +10,23 @@
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
-        <h3>Formulário de Contato</h3>
+        <h3>
+          <FormattedMessage id="form.title" />
+        </h3>
         <input type="hidden" name="form-name" value="contact" />
         <p hidden>
-          <label> Don’t fill this out: <input name="bot-field" /> </label>
+          <label>
+            Don’t fill this out:
+            <input name="bot-field" />
+          </label>
         </p>
         <div class="sender-info">
           <div>
-            <label for="name" class="label">Full name</label>
+            <label for="name" class="label">
+              <FormattedMessage id="form.name" />
+            </label>
             <input
-              placeholder="Write your full name"
+              :placeholder="namePlaceholder"
               type="text"
               name="name"
               v-model="formData.name"
@@ -26,9 +34,11 @@
             />
           </div>
           <div>
-            <label for="email">Email</label>
+            <label for="email">
+              <FormattedMessage id="form.email" />
+            </label>
             <input
-              placeholder="Write your email"
+              :placeholder="emailPlaceholder"
               type="email"
               name="email"
               v-model="formData.email"
@@ -38,41 +48,67 @@
         </div>
 
         <div class="message-wrapper">
-          <label for="message">Message</label>
+          <label for="message">
+            <FormattedMessage id="form.message" />
+          </label>
           <textarea
             rows="10"
-            placeholder="Write your message here"
+            :placeholder="messagePlaceholder"
             name="message"
             v-model="formData.message"
           ></textarea>
         </div>
 
-        <button class="buttonSubmit" type="submit">Submit form</button>
+        <button class="buttonSubmit" type="submit">
+          <FormattedMessage id="form.submit" />
+        </button>
       </form>
     </div>
     <div class="footer">
       <!-- search this information according to calendar date (always updated) -->
       <span class="footer__copyright"
-        >Copyright © {{ new Date().getFullYear() }}.
-      </span>
-      <span class="footer__links"
-        >Powered by <a href="//gridsome.org"> Gridsome <Vue class="vueSVG"/></a></span
+        >Copyright © {{ new Date().getFullYear() }}.</span
       >
+      <span class="footer__links">
+        Powered by
+        <a href="//gridsome.org">
+          Gridsome
+          <Vue class="vueSVG" />
+        </a>
+      </span>
     </div>
   </div>
 </template>
 
 <script>
-import Vue from "../assets/svgs/vue.svg"
+import Vue from "../assets/svgs/vue.svg";
+import FormattedMessage, {
+  getTranslationExported
+} from "../languageProvider/FormattedMessage";
+import localStorage from "local-storage";
 
 export default {
   data() {
     return {
-      formData: {}
+      formData: {},
+      currentLanguage: localStorage.get("language"),
+      namePlaceholder: getTranslationExported(
+        "form.name.placeholder",
+        localStorage.get("language")
+      ),
+      emailPlaceholder: getTranslationExported(
+        "form.email.placeholder",
+        localStorage.get("language")
+      ),
+      messagePlaceholder: getTranslationExported(
+        "form.message.placeholder",
+        localStorage.get("language")
+      )
     };
   },
   components: {
-    Vue
+    Vue,
+    FormattedMessage
   },
   name: "ContactForm",
   methods: {
@@ -96,6 +132,23 @@ export default {
         .catch(error => alert(error));
     }
   },
+  mounted() {
+    // catches a language change and updates the localLanguage at the local storage and here, to update all components
+    this.$root.$on("languageChange", newLanguage => {
+      (this.namePlaceholder = getTranslationExported(
+        "form.name.placeholder",
+        localStorage.get("language")
+      )),
+        (this.emailPlaceholder = getTranslationExported(
+          "form.email.placeholder",
+          localStorage.get("language")
+        )),
+        (this.messagePlaceholder = getTranslationExported(
+          "form.message.placeholder",
+          localStorage.get("language")
+        ));
+    });
+  }
 };
 </script>
 

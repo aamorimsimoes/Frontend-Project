@@ -5,9 +5,11 @@
       v-if="imgSource"
       :src="require(`@/assets/img/${imgSource}`)"
     />
-    <h3>{{ title }}</h3>
+    <h3>
+      <FormattedMessage :id="title" />
+    </h3>
     <p v-for="(text, index) in bodyContent" :key="`${id}_${index}`">
-      {{ text }}
+      <FormattedMessage :id="text" />
     </p>
     <a class="linkSize" v-if="link" :href="link">{{ link }}</a>
     <div />
@@ -15,8 +17,10 @@
 </template>
 
 <script>
+import FormattedMessage from "../../languageProvider/FormattedMessage";
 export default {
   name: "ReusableCard",
-  props: ["imgSource", "id", "title", "bodyContent", "link"]
+  props: ["imgSource", "id", "title", "bodyContent", "link"],
+  components: { FormattedMessage }
 };
 </script>

@@ -7,13 +7,15 @@
       />
     </div>
     <div class="textPart">
-      <h2 class="carouselInfoTitle">{{ title }}</h2>
+      <h2 class="carouselInfoTitle">
+        <FormattedMessage :id="title" />
+      </h2>
       <h4
         class="carouselInfoBody"
         v-for="(text, index) in bodyContent"
         :key="`${title}_${index}`"
       >
-        {{ text }}
+        <FormattedMessage :id="text" />
       </h4>
       <!-- <h4 class="carouselInfoBody">{{ bodyContent }}</h4> -->
     </div>
@@ -26,8 +28,11 @@
   </div>
 </template>
 <script>
+import FormattedMessage from "../../../languageProvider/FormattedMessage";
+
 export default {
   name: "CarouselContent",
-  props: ["title", "imgSource", "bodyContent"]
+  props: ["title", "imgSource", "bodyContent"],
+  components: { FormattedMessage }
 };
 </script>

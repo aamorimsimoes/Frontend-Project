@@ -24,8 +24,8 @@ export default {
         {
           imgSource: "products/machiningServices/drill.jpg",
           id: "services00",
-          title: "Serviços de Maquinação",
-          bodyContent: ["A Sistecaut, Sistemas Técnicos de Automação, Lda. dispõe aos seus clientes serviços de maquinação de peças únicas e em série em vários materiais tais como: aço, alumínio, latão, cobre, bronzes e ligas de plástico, entre outros. Garantimos acompanhamento, controlo de processo, qualidade, assim como prazos de entrega."],
+          title: "products.page.machServs",
+          bodyContent: ["products.machServs.bodyContent00"],
         },
         {
           imgSource: "",

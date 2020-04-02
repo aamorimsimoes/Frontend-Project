@@ -9,12 +9,12 @@
       v-on:click="handlePreviousClick"
       class="arrowButtons buttonPrevious"
     >
-      &lt; -->
+    &lt;-->
     <!-- symbol for the less than char (<) -->
     <!-- </button> -->
     <!-- <button v-on:click="handleNextClick" class="arrowButtons buttonNext">
       &gt;
-      <! symbol for the greater than char (>) -->
+    <! symbol for the greater than char (>)-->
     <!-- </button> -->
     <div
       v-for="(slide, index) in slides"
@@ -37,31 +37,31 @@ let current = 0;
 const slides = [
   {
     id: "slider0",
-    title: "Missão",
+    title: "slider.slider0.title",
     bodyContent: [
-      "Analisar, projetar e desenvolver conceitos e soluções inovadoras no mercado industrial, com elevada competência e qualidade. Atuar nos mercados superando as expetativas do cliente e requisitos contratados.",
-      "Prestar apoio após venda associado às atividades acima descritas."
+      "slider.slider0.bodyContent00",
+      "slider.slider0.bodyContent01"
     ],
     img: "ideasWhiteboard.jpg"
   },
   {
     id: "slider1",
-    title: "Competências",
+    title: "slider.slider1.title",
     bodyContent: [
-      "Para poder inovar no mercado privilegia o conhecimento, o empreendedorismo e a criatividade.",
-      "Dispõe de competências profissionais de engenharia, produção e serviços, nas áreas: mecânica, pneumática, hidráulica, eletrotécnica, tecnologias de informação e computação.",
-      "É estratégia da Sistecaut, Lda apresentar conceitos e soluções inovadoras, visando a melhoria de eficiência de processos e soluções."
+      "slider.slider1.bodyContent00",
+      "slider.slider1.bodyContent01",
+      "slider.slider1.bodyContent02"
     ],
     img: "engineersAtWork.jpg"
   },
   {
     id: "slider2",
-    title: "Mercados",
+    title: "slider.slider2.title",
     bodyContent: [
-      "O nosso conhecimento, capacidade e flexibilidade, são valores reconhecidos nos diversos mercados onde atuamos, especificamente no mercado automóvel.",
-      "Para estes desenvolvemos máquinas especiais, sistemas de fabrico, de inspeção e controlo.",
-      "Participamos também noutros sectores como parceiros, desenvolvendo sistemas de controlo e monitorização de processo dedicados e abertos.",
-      "Analisamos necessidades e apresentamos também soluções aos mercados no campo da manutenção e remodelação de sistemas existentes."
+      "slider.slider2.bodyContent00",
+      "slider.slider2.bodyContent01",
+      "slider.slider2.bodyContent02",
+      "slider.slider2.bodyContent03"
     ],
     img: "femaleEngineer.jpg"
   }
