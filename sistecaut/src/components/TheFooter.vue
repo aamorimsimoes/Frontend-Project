@@ -54,16 +54,6 @@
           </li>
         </ul>
       </div>
-      
-    </div>
-    <div>
-      <!-- search this information according to calendar date (always updated) -->
-      <span class="footer__copyright"
-        >Copyright © {{ new Date().getFullYear() }}.
-      </span>
-      <span class="footer__links"
-        >Powered by <a href="//gridsome.org"> Gridsome </a></span
-      >
     </div>
   </div>
 </template>
@@ -81,7 +71,7 @@ export default {
 }
 
 #footer {
-  // background-color: lightcyan;
+  background-color: lightcyan;
   height: 90vh;
   width: 90vw;
   padding: 0vh 5vw 0vh 5vw;
