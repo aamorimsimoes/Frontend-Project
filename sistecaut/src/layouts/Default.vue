@@ -66,8 +66,7 @@ export default {
 } */
 
 body {
-  font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: Geomanist-Complete-Desktop;
 }
 
 .bigTemplate {
