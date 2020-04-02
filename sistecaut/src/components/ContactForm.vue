@@ -100,16 +100,16 @@ export default {
 </script>
 
 <style lang="scss">
-.formContact {
-  // background-image: url("../assets/img/whiteSmartphone.jpg");
-  // background-origin: content-box;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-size: cover;
-  // height: 90vh;
-  // width: 100vw;
-  float: left;
-}
+// .formContact {
+//   // background-image: url("../assets/img/whiteSmartphone.jpg");
+//   // background-origin: content-box;
+//   // background-position: center;
+//   // background-repeat: no-repeat;
+//   // background-size: cover;
+//   // height: 90vh;
+//   // width: 100vw;
+//   // float: left;
+// }
 
 form input,
 form textarea {
@@ -167,7 +167,7 @@ form {
 .footer {
   position: fixed;
   left: 0;
-  top: 85vh;
+  top: 80vh;
   width: 100%;
   color: var(--gray-color);
   text-align: center;

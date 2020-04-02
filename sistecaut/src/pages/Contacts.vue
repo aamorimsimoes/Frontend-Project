@@ -2,7 +2,7 @@
   <Layout>
     <AnimationWrapper
       idStart="contactsAnimated"
-      :nPages="nPages"
+      :pageTitles="pageTitles"
       :currentPage="currentPage"
       :setCurrentPage="setCurrentPage"
     >
@@ -47,7 +47,7 @@ export default {
   },
   data() {
     return {
-      nPages: 3, // number of available pages
+      pageTitles: ["Contacts", "Page 2", "Page 3"], // pages titles
       currentPage: 0 // current page showing
     };
   },

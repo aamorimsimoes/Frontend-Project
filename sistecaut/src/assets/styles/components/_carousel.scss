@@ -1,0 +1,304 @@
+.carouselViewport {
+  font-family: var(--main-font-family);
+  font-weight: var(--font-weight);
+  display: inline-block;
+  overflow: hidden;
+  position: fixed;
+
+  @include for-size(phone-only) {
+    font-size: var(--mobile-base-font-size);
+    left: calc(var(--mobile-page-slider-width) * -1);
+    height: calc(98vh - var(--mobile-nav-height));
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    width: 100vw !important;
+  }
+  @include for-size(tablet-portrait-up) {
+    font-size: var(--tablet-base-font-size);
+    left: calc(var(--tablet-page-slider-width) * -1);
+    height: calc(98vh - var(--tablet-nav-height));
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    width: 100vw !important;
+  }
+  @include for-size(desktop-up) {
+    font-size: var(--desktop-base-font-size);
+    left: calc(var(--desktop-page-slider-width) * -1);
+    height: calc(98vh - var(--desktop-nav-height));
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    width: 100vw !important;
+  }
+}
+
+// --------------------------------------------
+// Carousel
+
+@keyframes jumpLeftMobile {
+  0% {
+    left: 10px;
+  }
+  50% {
+    left: 5px;
+  }
+  100% {
+    left: 10px;
+  }
+}
+
+@keyframes jumpLeftTablet {
+  0% {
+    left: 20px;
+  }
+  50% {
+    left: 10px;
+  }
+  100% {
+    left: 20px;
+  }
+}
+
+@keyframes jumpLeftDesktop {
+  0% {
+    left: 20px;
+  }
+  50% {
+    left: 10px;
+  }
+  100% {
+    left: 20px;
+  }
+}
+@keyframes jumpRightMobile {
+  0% {
+    right: 10px;
+  }
+  50% {
+    right: 5px;
+  }
+  100% {
+    right: 10px;
+  }
+}
+@keyframes jumpRightTablet {
+  0% {
+    right: 20px;
+  }
+  50% {
+    right: 10px;
+  }
+  100% {
+    right: 20px;
+  }
+}
+
+@keyframes jumpRightDesktop {
+  0% {
+    right: 20px;
+  }
+  50% {
+    right: 10px;
+  }
+  100% {
+    right: 20px;
+  }
+}
+.arrowButtons {
+  z-index: 99;
+  position: absolute;
+  color: black;
+  border: none;
+  font-weight: lighter;
+  font-size: larger;
+
+  @include for-size(phone-only) {
+    top: calc(
+      (100vh - var(--mobile-nav-height) - var(--mobile-carrousel-arrow)) / 2
+    );
+    height: var(--mobile-carrousel-arrow);
+    width: var(--mobile-carrousel-arrow);
+    border-radius: var(--mobile-carrousel-arrow);
+  }
+  @include for-size(tablet-portrait-up) {
+    top: calc(
+      (100vh - var(--tablet-nav-height) - var(--tablet-carrousel-arrow)) / 2
+    );
+    height: var(--tablet-carrousel-arrow);
+    width: var(--tablet-carrousel-arrow);
+    border-radius: var(--tablet-carrousel-arrow);
+  }
+  @include for-size(desktop-up) {
+    top: calc(
+      (100vh - var(--desktop-nav-height) - var(--desktop-carrousel-arrow)) / 2
+    );
+    height: var(--desktop-carrousel-arrow);
+    width: var(--desktop-carrousel-arrow);
+    border-radius: var(--desktop-carrousel-arrow);
+  }
+}
+
+.arrowButtons:focus {
+  outline: none;
+}
+
+.arrowButtons:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.buttonPrevious {
+  @include for-size(phone-only) {
+    left: 5px;
+    animation: jumpLeftMobile 3s infinite;
+  }
+  @include for-size(tablet-portrait-up) {
+    left: 20px;
+    animation: jumpLeftTablet 3s infinite;
+  }
+  @include for-size(desktop-up) {
+    left: 20px;
+    animation: jumpLeftDesktop 3s infinite;
+  }
+}
+
+.buttonNext {
+  @include for-size(phone-only) {
+    right: 5px;
+    animation: jumpRightMobile 3s infinite;
+  }
+  @include for-size(tablet-portrait-up) {
+    right: 20px;
+    animation: jumpRightTablet 3s infinite;
+  }
+  @include for-size(desktop-up) {
+    right: 20px;
+    animation: jumpRightDesktop 3s infinite;
+  }
+}
+
+.carouselSlider {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+// --------------------------------------------
+// Carousel Content
+
+.carouselContent {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+
+  @include for-size(phone-only) {
+    display: initial;
+  }
+  @include for-size(tablet-portrait-up) {
+  }
+  @include for-size(desktop-up) {
+    display: inline-flex;
+  }
+}
+
+.textPart {
+  color: black;
+  text-align: center;
+  z-index: 100;
+}
+
+.handleImageCarousel {
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  object-position: right;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.imagePart {
+  @include for-size(phone-only) {
+    width: 100%;
+    height: 50%;
+  }
+  @include for-size(tablet-portrait-up) {
+    width: 100%;
+    height: 50%;
+  }
+  @include for-size(desktop-up) {
+    width: 60%;
+    height: 100%;
+  }
+}
+
+.textPart {
+  @include for-size(phone-only) {
+    width: 100%;
+    height: 50%;
+  }
+  @include for-size(tablet-portrait-up) {
+    width: 100%;
+    height: 50%;
+  }
+  @include for-size(desktop-up) {
+    width: 40%;
+    height: 100%;
+  }
+}
+
+.carouselInfoTitle {
+  text-align: left;
+  font-family: var(--main-font-family);
+  font-weight: var(--font-weight);
+
+  @include for-size(phone-only) {
+    font-size: var(--mobile-title-font-size);
+    margin: 10px var(--mobile-page-slider-width) 10px
+      var(--mobile-page-slider-width);
+    padding: 5px;
+  }
+  @include for-size(tablet-portrait-up) {
+    font-size: var(--tablet-title-font-size);
+    margin: 0 var(--tablet-page-slider-width) 20px
+      var(--tablet-page-slider-width);
+    padding: 10px;
+  }
+  @include for-size(desktop-up) {
+    font-size: var(--desktop-title-font-size);
+    margin: 0 5rem 0 2rem;
+    padding: 1rem;
+  }
+}
+
+.carouselInfoBody {
+  font-family: var(--main-font-family);
+  font-weight: var(--font-weight);
+  text-align: justify;
+
+  font-family: var(--main-font-family);
+  font-weight: var(--font-weight);
+
+  @include for-size(phone-only) {
+    font-size: var(--mobile-base-font-size);
+    margin: 0 var(--mobile-page-slider-width) 0 var(--mobile-page-slider-width);
+    padding: 5px;
+  }
+  @include for-size(tablet-portrait-up) {
+    font-size: var(--tablet-base-font-size);
+    margin: 0 var(--tablet-page-slider-width) 0 var(--tablet-page-slider-width);
+    padding: 10px;
+  }
+  @include for-size(desktop-up) {
+    font-size: var(--desktop-base-font-size);
+    margin: 0 5rem 0 2rem;
+    padding: 1rem;
+  }
+}

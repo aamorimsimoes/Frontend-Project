@@ -1,7 +1,12 @@
 @import "reset";
 @import "base";
 @import "mixins";
-@import "components";
 @import "variables";
 @import "typography";
 @import "htmlElements";
+@import "components/carousel";
+@import "components/general";
+@import "components/navBar";
+@import "components/reusableCard";
+@import "components/sliderButtons";
+@import "components/visibility";

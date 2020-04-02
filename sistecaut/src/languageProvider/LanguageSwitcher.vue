@@ -44,19 +44,6 @@ export default {
 };
 </script>
 <style>
-.languageSelect {
-  display: inline-block;
-  width: 150px;
-  height: 20px;
-  text-align: center;
-  font-family: Geomanist-Complete-Desktop;
-  font-size: 20px;
-  font-weight: bold;
-  color: var(--grey-color);
-  background-color: transparent;
-  border: var(--orange-color) solid 3px;
-  cursor: pointer;
-}
 .spanCurrentLanguage {
   padding: 0 5px 0 5px;
 }
@@ -75,14 +62,5 @@ export default {
 }
 .optionList:hover {
   background-color: lightgray;
-}
-.languageForm {
-  display: none;
-  position: relative;
-  top: 0;
-  width: 150px;
-  height: fit-content;
-  background-color: white;
-  margin-top: 2px;
 }
 </style>

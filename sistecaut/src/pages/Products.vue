@@ -2,7 +2,7 @@
   <Layout>
     <AnimationWrapper
       idStart="productsAnimated"
-      :nPages="nPages"
+      :pageTitles="pageTitles"
       :currentPage="currentPage"
       :setCurrentPage="setCurrentPage"
     >
@@ -64,7 +64,12 @@ export default {
   },
   data() {
     return {
-      nPages: 4, // number of available pages
+      pageTitles: [
+        "RobotisedCells",
+        "SpecialMachines",
+        "ElectricalServices",
+        "MachiningServices"
+      ], // pages titles
       currentPage: 0 // current page showing
     };
   },

@@ -1,0 +1,37 @@
+// --------------------------------------------
+// Components Visibility
+
+.mobileOnly {
+  transition: 1s ease-in-out;
+  display: initial;
+  @include for-size(tablet-portrait-up) {
+    display: none;
+  }
+}
+
+.tabletOnly {
+  transition: 1s ease-in-out;
+  display: none;
+  @include for-size(tablet-portrait-up) {
+    display: initial;
+  }
+  @include for-size(desktop-up) {
+    display: none;
+  }
+}
+
+.desktopOnly {
+  transition: 1s ease-in-out;
+  display: none;
+  @include for-size(desktop-up) {
+    display: initial;
+  }
+}
+
+.mobileNot {
+  transition: 1s ease-in-out;
+  display: none;
+  @include for-size(tablet-portrait-up) {
+    display: initial;
+  }
+}

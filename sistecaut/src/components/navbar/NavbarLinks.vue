@@ -1,7 +1,27 @@
 <template>
-  <nav class="nav notVisibleOnMobile">
-    <!-- Logo Image -->
-    <div class="STAlogo">
+  <nav class="navBarLinks">
+    <!-- Logo Image SMALL -->
+    <div class="STAlogo mobileOnly">
+      <g-image
+        alt="STAlogo"
+        src="~/assets/icons/staFull.png"
+        width="20px"
+        height="20px"
+        fit="outside"
+      />
+    </div>
+    <!-- Logo Image MEDIUM -->
+    <div class="STAlogo tabletOnly">
+      <g-image
+        alt="STAlogo"
+        src="~/assets/icons/staFull.png"
+        width="50px"
+        height="50px"
+        fit="outside"
+      />
+    </div>
+    <!-- Logo Image BIG -->
+    <div class="STAlogo desktopOnly">
       <g-image
         alt="STAlogo"
         src="~/assets/icons/staFull.png"
@@ -14,7 +34,9 @@
     <div class="STAlinks">
       <g-link
         :class="
-          currentLocation === '/' ? 'nav__link activeNavLink' : 'nav__link'
+          currentLocation === '/'
+            ? 'navBarTitles activeNavLink'
+            : 'navBarTitles'
         "
         to="/"
         >Início</g-link
@@ -22,8 +44,8 @@
       <g-link
         :class="
           currentLocation === '/Products'
-            ? 'nav__link activeNavLink'
-            : 'nav__link'
+            ? 'navBarTitles activeNavLink'
+            : 'navBarTitles'
         "
         to="/Products"
         >Produtos</g-link
@@ -31,8 +53,8 @@
       <g-link
         :class="
           currentLocation === '/Contacts'
-            ? 'nav__link activeNavLink'
-            : 'nav__link'
+            ? 'navBarTitles activeNavLink'
+            : 'navBarTitles'
         "
         to="/Contacts"
         >Contactos</g-link
@@ -41,10 +63,8 @@
     </div>
   </nav>
 </template>
-
 <script>
 import LanguageSwitcher from "../../languageProvider/LanguageSwitcher";
-
 export default {
   name: "NavbarLinks",
   components: { LanguageSwitcher },
@@ -57,7 +77,6 @@ export default {
   }
 };
 </script>
-
 <style>
 .STAlogo {
   float: left;
@@ -66,23 +85,5 @@ export default {
 .STAlinks {
   float: right;
   padding: 2vh 2vh;
-}
-
-.nav__link {
-  text-decoration: none;
-  font-size: 30px;
-  color: black;
-}
-
-.nav__link:visited {
-  text-decoration: none;
-  color: var(--grey-color);
-}
-.nav__link:hover {
-  color: #f08013;
-}
-.activeNavLink {
-  text-decoration: none !important;
-  color: #f08013 !important;
 }
 </style>

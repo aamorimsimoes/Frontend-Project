@@ -1,5 +1,5 @@
 <template>
-  <div class="generalDimensions">
+  <div>
     <slot />
   </div>
 </template>

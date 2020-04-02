@@ -1,0 +1,184 @@
+// --------------------------------------------
+// Slider Buttons
+
+@keyframes jumpUpMobile {
+  0% {
+    top: 30px;
+  }
+  50% {
+    top: 40px;
+  }
+  100% {
+    top: 30px;
+  }
+}
+
+@keyframes jumpUpTablet {
+  0% {
+    top: var(--tablet-nav-height);
+  }
+  50% {
+    top: 95px;
+  }
+  100% {
+    top: var(--tablet-nav-height);
+  }
+}
+
+@keyframes jumpUpDesktop {
+  0% {
+    top: var(--desktop-nav-height);
+  }
+  50% {
+    top: 100px;
+  }
+  100% {
+    top: var(--desktop-nav-height);
+  }
+}
+
+@keyframes jumpDownDesktop {
+  0% {
+    bottom: var(--desktop-page-slider-size);
+  }
+  50% {
+    bottom: 50px;
+  }
+  100% {
+    bottom: var(--desktop-page-slider-size);
+  }
+}
+
+@keyframes jumpDownTablet {
+  0% {
+    bottom: var(--tablet-page-slider-size);
+  }
+  50% {
+    bottom: 40px;
+  }
+  100% {
+    bottom: var(--tablet-page-slider-size);
+  }
+}
+
+@keyframes jumpDownMobile {
+  0% {
+    bottom: 20px;
+  }
+  50% {
+    bottom: 10px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}
+
+.slideComponents {
+  z-index: 100;
+  position: absolute;
+  color: black;
+  border: none;
+  font-weight: lighter;
+  font-size: larger;
+  transition: 0.3s ease-in-out;
+}
+
+.pageSpan {
+  left: 1px;
+  text-align: center;
+  height: fit-content;
+  word-break: break-all;
+
+  @include for-size(phone-only) {
+    width: var(--mobile-page-slider-width);
+  }
+  @include for-size(tablet-portrait-up) {
+    width: var(--tablet-page-slider-width);
+  }
+  @include for-size(desktop-up) {
+    width: var(--desktop-page-slider-width);
+  }
+}
+
+.pageSpanUp {
+  @include for-size(phone-only) {
+    top: calc(var(--mobile-page-slider-size) * 2.8);
+  }
+  @include for-size(tablet-portrait-up) {
+    top: calc(var(--tablet-page-slider-size) * 2.8);
+  }
+  @include for-size(desktop-up) {
+    top: calc(var(--desktop-page-slider-size) * 2.8);
+  }
+}
+
+.pageSpanDown {
+  @include for-size(phone-only) {
+    bottom: calc(var(--mobile-page-slider-size) * 2);
+  }
+  @include for-size(tablet-portrait-up) {
+    bottom: calc(var(--tablet-page-slider-size) * 2);
+  }
+  @include for-size(desktop-up) {
+    bottom: calc(var(--desktop-page-slider-size) * 2);
+  }
+}
+
+.slideButtons {
+  @include for-size(phone-only) {
+    height: var(--mobile-page-slider-size);
+    width: var(--mobile-page-slider-size);
+    border-radius: var(--mobile-page-slider-size);
+    left: calc(
+      (var(--mobile-page-slider-width) - var(--mobile-page-slider-size)) / 2
+    );
+  }
+  @include for-size(tablet-portrait-up) {
+    height: var(--tablet-page-slider-size);
+    width: var(--tablet-page-slider-size);
+    border-radius: var(--tablet-page-slider-size);
+    left: calc(
+      (var(--tablet-page-slider-width) - var(--tablet-page-slider-size)) / 2
+    );
+  }
+  @include for-size(desktop-up) {
+    height: var(--desktop-page-slider-size);
+    width: var(--desktop-page-slider-size);
+    border-radius: var(--desktop-page-slider-size);
+    left: calc(
+      (var(--desktop-page-slider-width) - var(--desktop-page-slider-size)) / 2
+    );
+  }
+}
+
+.slideButtons:focus {
+  outline: none;
+}
+
+.slideButtons:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.slideUp {
+  @include for-size(phone-only) {
+    animation: jumpUpMobile 3s infinite;
+  }
+  @include for-size(tablet-portrait-up) {
+    animation: jumpUpTablet 3s infinite;
+  }
+  @include for-size(desktop-up) {
+    animation: jumpUpDesktop 3s infinite;
+  }
+}
+
+.slideDown {
+  @include for-size(phone-only) {
+    animation: jumpDownMobile 3s infinite;
+  }
+  @include for-size(tablet-portrait-up) {
+    animation: jumpDownTablet 3s infinite;
+  }
+  @include for-size(desktop-up) {
+    animation: jumpDownDesktop 3s infinite;
+  }
+}

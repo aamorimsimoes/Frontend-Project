@@ -1,0 +1,162 @@
+// --------------------------------------------
+// Nav bar
+
+.navBarContainer {
+  width: 100%;
+
+  z-index: 9999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: 1s ease-in-out;
+  background-color: white;
+
+  @include for-size(phone-only) {
+    height: var(--mobile-nav-height);
+  }
+  @include for-size(tablet-portrait-up) {
+    height: var(--tablet-nav-height);
+  }
+  @include for-size(desktop-up) {
+    height: var(--desktop-nav-height);
+  }
+}
+
+.navBarLinks {
+  width: 100%;
+  display: inline-block;
+}
+
+.navBarTitles {
+  text-decoration: none;
+  color: black;
+  transition: 1s ease-in-out;
+  font-family: Geomanist-Complete-Desktop;
+  font-weight: bold;
+
+  @include for-size(phone-only) {
+    font-size: 12px;
+    margin-left: 2px;
+    margin-right: 2px;
+  }
+  @include for-size(tablet-portrait-up) {
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  @include for-size(desktop-up) {
+    font-size: 30px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.navBarTitles:visited {
+  color: var(--grey-color);
+}
+
+.navBarTitles:hover {
+  color: #f08013;
+}
+.activeNavLink {
+  text-decoration: none !important;
+  color: #f08013 !important;
+}
+
+.languageSelect {
+  font-family: Geomanist-Complete-Desktop;
+  font-weight: bold;
+  text-align: center;
+  color: var(--grey-color);
+  background-color: transparent;
+  border: var(--orange-color) solid 3px;
+  display: inline-block;
+  cursor: pointer;
+
+  @include for-size(phone-only) {
+    font-size: 10px;
+    height: 10px;
+    width: 68px;
+  }
+  @include for-size(tablet-portrait-up) {
+    font-size: 20px;
+    height: 20px;
+    width: 130px;
+  }
+  @include for-size(desktop-up) {
+    font-size: 20px;
+    height: 20px;
+    width: 150px;
+  }
+}
+
+.languageForm {
+  display: none;
+  position: relative;
+  top: 0;
+  height: fit-content;
+  background-color: white;
+  margin-top: 2px;
+
+  @include for-size(phone-only) {
+    width: 68px;
+  }
+  @include for-size(tablet-portrait-up) {
+    width: 130px;
+  }
+  @include for-size(desktop-up) {
+    width: 150px;
+  }
+}
+
+// --------------------------------------------
+// Mobile Sidebar
+
+.hamburguer {
+  width: 20px;
+  height: 20px;
+  float: right;
+  transition: 2s ease-in-out;
+  position: fixed;
+  right: 20px;
+  top: 5px;
+  z-index: 10000;
+  cursor: pointer;
+}
+
+.naveSiderSlider {
+  transform: translate(0, 0) !important;
+}
+
+.naveSider {
+  height: 7%;
+  width: 100%;
+  border: 1px solid var(--orange-color);
+  border-top: none;
+  border-right: none;
+  background: white;
+  z-index: 1000;
+  position: fixed;
+  top: 5vh;
+  right: 0;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+  font-family: Iosevka Term Nerd Font Complete;
+  transition: 1s ease-in-out;
+  transform: translate(120%, 0);
+
+  -webkit-box-shadow: -19px 25px 22px -20px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -19px 25px 22px -20px rgba(0, 0, 0, 0.75);
+  box-shadow: -19px 25px 22px -20px rgba(0, 0, 0, 0.75);
+}
+
+.navSiderImage {
+  height: 50px;
+  width: 50px;
+  padding-top: 8vh;
+  align-self: center;
+}

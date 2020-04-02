@@ -1,19 +1,24 @@
 <template>
   <div>
     <ArrowUp
-      class="slideButtons slideUp"
+      class="slideComponents slideButtons slideUp"
       v-on:click="handleUpClick"
       v-if="currentPage > 0"
     />
+    <div class="slideComponents pageSpan pageSpanUp mobileNot">
+      {{ pageTitles[currentPage - 1] }}
+    </div>
+    <div class="slideComponents pageSpan pageSpanDown mobileNot">
+      {{ pageTitles[currentPage + 1] }}
+    </div>
     <ArrowDown
-      class="slideButtons slideDown"
+      class="slideComponents slideButtons slideDown"
       v-on:click="handleDownClick"
-      v-if="currentPage < nPages - 1"
+      v-if="currentPage < pageTitles.length - 1"
     />
     <slot />
   </div>
 </template>
-
 <script>
 import ArrowUp from "@/assets/svgs/chevrons-up.svg";
 import ArrowDown from "@/assets/svgs/chevrons-down.svg";
@@ -23,7 +28,7 @@ export default {
     ArrowUp,
     ArrowDown
   },
-  props: ["idStart", "nPages", "currentPage", "setCurrentPage"],
+  props: ["idStart", "pageTitles", "currentPage", "setCurrentPage"],
   data() {
     return {
       nextPage: null,
@@ -41,10 +46,10 @@ export default {
     },
     handleDownClick: function() {
       this.scrolling = true;
-      if (this.currentPage < this.nPages - 1) {
+      if (this.currentPage < this.pageTitles.length - 1) {
         this.nextPage = this.currentPage + 1;
       } else {
-        this.nextPage = this.nPages - 1;
+        this.nextPage = this.pageTitles.length - 1;
       }
     },
     handlePageChange: function() {
@@ -89,35 +94,3 @@ export default {
   }
 };
 </script>
-
-<style>
-.slideButtons {
-  z-index: 100;
-  position: absolute;
-  color: black;
-  /* background-color: rgba(0, 0, 0, .2); */
-  height: 7vh;
-  width: 7vh;
-  left: 20px;
-  border-radius: 10vh;
-  border: none;
-  font-weight: lighter;
-  font-size: larger;
-}
-
-.slideButtons:focus {
-  outline: none;
-}
-
-.slideButtons:hover {
-  background-color: rgba(0, 0, 0, .1);
-}
-
-.slideUp {
-  top: 15vh;
-}
-
-.slideDown {
-  bottom: 5vh;
-}
-</style>

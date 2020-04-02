@@ -1,7 +1,7 @@
 <template>
   <div class="card">
     <img
-      class="handleCardImage"
+      class="handleImage handleCardImage"
       v-if="imgSource"
       :src="require(`@/assets/img/${imgSource}`)"
     />
@@ -17,32 +17,6 @@
 <script>
 export default {
   name: "ReusableCard",
-  props: ["imgSource","id", "title", "bodyContent", "link"]
+  props: ["imgSource", "id", "title", "bodyContent", "link"]
 };
 </script>
-
-<style>
-/* card formatting */
-.card {
-  font-family: var(--main-font-family);
-  margin: 0 20px 0 20px;
-  height: 90%;
-  /* border: black solid 1px; */
-}
-.linkSize {
-  word-break: break-all;
-}
-
-/* news image formatting */
-
-.handleCardImage {
-  background-position: center;
-  background-size: cover;
-  height: 40%;
-  object-fit: cover;
-  object-position: right;
-  overflow: hidden;
-  width: 100%;
-}
-
-</style>

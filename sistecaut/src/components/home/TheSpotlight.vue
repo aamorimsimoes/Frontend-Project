@@ -1,8 +1,5 @@
 <template>
   <div class="newsContainer">
-    <!-- <div :key="project.title" v-for="project in projects" class="project">
-      <g-image :alt="project.title" id="spotlightImg" :src="require(`../assets/img/${project.img}`)" />
-    </div> -->
     <Card 
       v-for="(card) in news" 
       :key="card.id"
@@ -15,19 +12,7 @@
 </template>
 
 <script>
-import Card from "~/components/general/ReusableCard"
-/*
- * A key of an element must be a number or a string;
- * From the looks of it, you want to add multiple spotlights, therefore
- * to assure that you always give different keys, you should take
- * advantage of the v-for you are doing and give the title of each
- * project element to that key;
- * You were really close with the image src, I can see that now you
- * get the difference between a simple src and a :src, which is the
- * same as v-bind:src apparently, giving you access to the component
- * data. But you forgot that the image "myImg.jpg" is not only inside
- * the assets folder, but also at its subfolder "img";
- */
+import Card from "~/components/general/ReusableCard";
 
 export default {
   name: "Spotlight",
@@ -53,17 +38,6 @@ export default {
       ]
     }
   },
-  // data() {
-  //   return {
-  //     projects: [
-  //       {
-  //         title: "Proj1",
-  //         img: "myImg.jpg"
-  //       }
-  //     ]
-  //   };
-  // }
-  
 };
 </script>
 
@@ -71,30 +45,5 @@ export default {
 .newsContainer {
   display: flex;
   justify-content: space-around;
-
-  // component dimensions
-  width: var(--desktop-width);
-  height: var(--desktop-height);
-}
-
-/* 
-    this css class will be used in every img html element
-    it centralizes the image to the size of its container
-    and stretches it to fit everything
-*/
-
-// #spotlightImg {
-//   filter: blur(5px) grayscale(80%); // apply filter blur, grayscale and adjust its intensity
-//   background-position: center;
-//   background-size: cover;
-//   height: 95vh;
-//   object-fit: cover;
-//   object-position: right;
-//   overflow: hidden;
-//   width: 100vw;
-// }
-
-@media (min-width: 1025px) {
-  
 }
 </style>

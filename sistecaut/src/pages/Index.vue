@@ -2,7 +2,7 @@
   <Layout>
     <AnimationWrapper
       idStart="indexAnimated"
-      :nPages="nPages"
+      :pageTitles="pageTitles"
       :currentPage="currentPage"
       :setCurrentPage="setCurrentPage"
     >
@@ -60,7 +60,7 @@ export default {
   name: "Sistecaut",
   data() {
     return {
-      nPages: 4, // number of pages available
+      pageTitles: ["Início", "Sobre", "Spotlight", "Footer"], // pages titles
       currentPage: 0 // current page showing
     };
   },
