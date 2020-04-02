@@ -60,7 +60,7 @@ at the inspect of the page */
 
 .bottomImage {
   width: 90vw;
-  height: 40vh;
+  height: 35vh;
   background-position: center;
   background-size: cover;
   object-fit: cover;
