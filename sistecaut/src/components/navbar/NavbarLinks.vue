@@ -89,6 +89,6 @@ export default {
 }
 .STAlinks {
   float: right;
-  padding: 2vh 2vh;
+  padding: 4vh 2vh;
 }
 </style>
