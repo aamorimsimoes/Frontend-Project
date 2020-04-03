@@ -3,6 +3,7 @@
     <!-- Logo Image SMALL -->
     <div class="STAlogo mobileOnly">
       <g-image
+        v-on:click="goHome"
         alt="STAlogo"
         src="~/assets/icons/staFull.png"
         width="20px"
@@ -13,6 +14,7 @@
     <!-- Logo Image MEDIUM -->
     <div class="STAlogo tabletOnly">
       <g-image
+        v-on:click="goHome"
         alt="STAlogo"
         src="~/assets/icons/staFull.png"
         width="50px"
@@ -23,6 +25,7 @@
     <!-- Logo Image BIG -->
     <div class="STAlogo desktopOnly">
       <g-image
+        v-on:click="goHome"
         alt="STAlogo"
         src="~/assets/icons/staFull.png"
         width="70px"
@@ -78,7 +81,12 @@ export default {
       currentPage: 0, // current page showing
       currentLocation: this.$router.history.current.path
     };
-  }
+  },
+  methods: {
+    goHome: function () {
+      this.$router.push("/")
+    }
+  },
 };
 </script>
 
@@ -86,6 +94,7 @@ export default {
 .STAlogo {
   float: left;
   padding: 8px 2vw;
+  cursor: pointer;
 }
 .STAlinks {
   float: right;
