@@ -20,13 +20,6 @@
       >
         <ContactInfo />
       </BaseComponent>
-      <BaseComponent
-        ref="contactsAnimated_2"
-        v-else-if="currentPage === 2"
-        class="initialSize"
-      >
-        <h1>Component Number 2</h1>
-      </BaseComponent>
     </AnimationWrapper>
   </Layout>
 </template>
@@ -49,7 +42,7 @@ export default {
   },
   data() {
     return {
-      pageTitles: ["Contacts", "Page 2", "Page 3"], // pages titles
+      pageTitles: ["form.title", "navbar.contacts"], // pages titles
       currentPage: 0 // current page showing
     };
   },

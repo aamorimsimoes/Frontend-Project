@@ -24,3 +24,13 @@ export default {
   components: { FormattedMessage }
 };
 </script>
+
+<style lang="scss">
+.handleCardImage:hover {
+  -webkit-box-shadow: 10px 10px 62px -19px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 62px -19px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 62px -19px rgba(0, 0, 0, 0.75);
+  transform: scale(1.1);
+  transition: 0.5s ease-in-out;
+}
+</style>

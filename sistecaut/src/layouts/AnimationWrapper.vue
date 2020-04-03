@@ -67,7 +67,6 @@ export default {
       handler(newValue) {
         if (newValue) {
           // get the "old" component
-          console.log("OLD COMP thi = ", this);
           const oldComp = this.$children[2];
           // if the old Component exists
           if (oldComp) {
