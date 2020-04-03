@@ -188,11 +188,12 @@ form input {
 
 form label,
 form {
+  font-weight: 900;
   display: block;
   font-size: 1.2rem;
   left: 50%;
-  outline: none;
   margin-top: 30px;
+  outline: none;
   position: relative;
   right: 50%;
   transform: translate(-50%);
@@ -200,35 +201,34 @@ form {
 }
 
 .buttonSubmit {
-  color: #494949 !important;
-  text-transform: uppercase;
-  text-decoration: none;
   background: #ffffff;
-  padding: 10px;
   border: 4px solid #494949 !important;
+  color: #494949 !important;
   display: inline-block;
+  padding: 10px;
+  text-decoration: none;
+  text-transform: uppercase;
   transition: all .4s ease 0s;
 }
 
 .buttonSubmit:hover {
-  color: #ffffff !important;
   background: var(--orange-color);
   border-color: var(--orange-color) !important;
+  color: #ffffff !important;
   transition: all .8s ease 0 s;
 }
 
 .footer {
-  position: fixed;
+  color: var(--gray-color);
   left: 0;
+  position: fixed;
+  text-align: center;
   top: 80vh;
   width: 100%;
-  color: var(--gray-color);
-  text-align: center;
 }
 
 .vueSVG {
   position: absolute;
-
   top: -17px;
 }
 </style>

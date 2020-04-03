@@ -1,30 +1,33 @@
 <template>
   <div class="successBox">
     <div class="handleText">
-      Thank you for filling out our form We have received your message and would
-      like to thank you for writing to us. If your inquiry is urgent, please use
-      the telephone number listed below to talk to one of our staff members.
-      Otherwise, we will reply by email as soon as possible. Talk to you soon,
-      Sistecaut, Lda
+      <FormattedMessage id="form.success" />
     </div>
-    <send />
+    <CornerDownLeft v-on:click="goBack" class="CornerDownLeftSVG" />
   </div>
 </template>
 
 <script>
-import Send from "@/assets/svgs/send.svg";
+import CornerDownLeft from "@/assets/svgs/cornerDownLeft.svg";
+import FormattedMessage from "@/languageProvider/FormattedMessage";
 
 export default {
   name: "Success",
   components: {
-    Send
-  }
+    CornerDownLeft,
+    FormattedMessage,
+  },
+  methods: {
+    goBack: function () {
+      this.$router.push("/contacts");
+    },
+  },
 };
 </script>
 
 <style>
 .handleText {
-  border: 2px solid black;
+  font-size: x-large !important;
   position: fixed;
   top: 50%;
   left: 50%;
@@ -33,8 +36,12 @@ export default {
   height: 50vh;
   width: 50vw;
 }
-.sendSVG {
+.CornerDownLeftSVG {
   width: 50px;
   height: 50px;
+  position: absolute;
+  left: 72%;
+  top: 60%;
+  cursor: pointer;
 }
 </style>
