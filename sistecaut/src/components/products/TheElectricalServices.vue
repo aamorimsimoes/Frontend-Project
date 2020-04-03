@@ -33,13 +33,13 @@ export default {
     return {
       products: [
         {
-          imgSource: "products/eletricalServices/eletricalServices_card00.jpg",
+          imgSource: "products/electricalServices/eletricalServices_card00.jpg",
           id: "robot00",
           title: "products.eletricServs.card00.title",
           bodyContent: ["products.eletricServs.card00.content"]
         },
         {
-          imgSource: "products/eletricalServices/eletricalServices_card01.jpg",
+          imgSource: "products/electricalServices/eletricalServices_card01.jpg",
           id: "robot01",
           title: "products.eletricServs.card01.title",
           bodyContent: ["products.eletricServs.card01.content"]
