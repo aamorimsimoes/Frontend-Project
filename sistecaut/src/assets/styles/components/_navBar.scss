@@ -41,9 +41,9 @@
     margin-right: 2px;
   }
   @include for-size(tablet-portrait-up) {
-    font-size: 25px;
-    margin-left: 10px;
-    margin-right: 10px;
+    font-size: 18px;
+    margin-left: 8px;
+    margin-right: 8px;
   }
   @include for-size(desktop-up) {
     font-size: 30px;
@@ -80,9 +80,9 @@
     width: 68px;
   }
   @include for-size(tablet-portrait-up) {
-    font-size: 20px;
+    font-size: 15px;
     height: 20px;
-    width: 130px;
+    width: 110px;
   }
   @include for-size(desktop-up) {
     font-size: 20px;
@@ -100,10 +100,12 @@
   margin-top: 2px;
 
   @include for-size(phone-only) {
+    font-size: 10px;
     width: 68px;
   }
   @include for-size(tablet-portrait-up) {
-    width: 130px;
+    font-size: 15px;
+    width: 110px;
   }
   @include for-size(desktop-up) {
     width: 150px;
@@ -135,10 +137,11 @@
   border: 1px solid var(--orange-color);
   border-top: none;
   border-right: none;
+  border-left: none;
   background: white;
   z-index: 1000;
   position: fixed;
-  top: 5vh;
+  top: var(--mobile-nav-height);
   right: 0;
   display: inline-flex;
   flex-direction: column;

@@ -1,0 +1,18 @@
+.productsCards {
+  @include for-size(phone-only) {
+    width: 300px;
+  }
+  @include for-size(tablet-portrait-up) {
+    width: 300px;
+  }
+  @include for-size(desktop-up) {
+    width: 300px;
+  }
+}
+
+.productsWrapper {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 20px;
+}

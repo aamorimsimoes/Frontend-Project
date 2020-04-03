@@ -1,3 +1,10 @@
+#footer {
+  //background-color: lightgreen;
+  min-height: 50vh;
+  width: 100%;
+}
+
+// --------------------------------------------
 // General
 
 .generalComponent {
@@ -28,6 +35,9 @@
 }
 
 .titleSize {
+  font-family: var(--main-font-family);
+  font-weight: var(--font-weight);
+
   @include for-size(phone-only) {
     font-size: var(--mobile-title-font-size);
   }
