@@ -64,5 +64,6 @@
   "form.email.placeholder": "Escreva seu email",
   "form.message": "Mensagem",
   "form.message.placeholder": "Escreva sua mensagem aqui",
-  "form.submit": "SUBMETER FORMULÁRIO"
+  "form.submit": "SUBMETER FORMULÁRIO",
+  "form.success": "Obrigado por preencher o nosso formulário. Recebemos a sua mensagem e gostariamos de agradecer pelo envio do mesma. Se a sua questão for urgente, por favor utilize o número de telefone referido na página contactos para falar com um memmbro do nossa equipa. De outra forma, nós vamos responder ao seu email o mais breve possível. Falamos consigo brevemente, Sistecaut, Lda"
 }

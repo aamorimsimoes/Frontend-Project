@@ -64,5 +64,6 @@
   "form.email.placeholder": "Write your email",
   "form.message": "Message",
   "form.message.placeholder": "Write your message here",
-  "form.submit": "SUBMIT FORM"
+  "form.submit": "SUBMIT FORM",
+  "form.success": "Thank you for filling out our form. We have received your message and would like to thank you for writing to us. If your inquiry is urgent, please use the telephone number listed in section contacts info to talk to one of our staff members. Otherwise, we will reply by email as soon as possible. Talk to you soon, Sistecaut, Lda"
 }
