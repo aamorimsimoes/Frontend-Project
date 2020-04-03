@@ -32,7 +32,6 @@
         v-else-if="currentPage === 3"
         class="initialSize"
       >
-        <Footer />
       </BaseComponent>
     </AnimationWrapper>
   </Layout>
@@ -41,7 +40,6 @@
 <script>
 import Carousel from "../components/home/carousel/Carousel";
 import Spotlight from "../components/home/TheSpotlight";
-import Footer from "../components/TheFooter";
 import About from "../components/home/TheAbout";
 import Layout from "../layouts/Default";
 import AnimationWrapper from "../layouts/AnimationWrapper";
@@ -51,7 +49,6 @@ export default {
   components: {
     Carousel,
     Spotlight,
-    Footer,
     About,
     Layout,
     AnimationWrapper,
@@ -64,7 +61,6 @@ export default {
         "navbar.home",
         "home.page.about",
         "home.page.news",
-        "navbar.contacts"
       ], // pages titles
       currentPage: 0 // current page showing
     };

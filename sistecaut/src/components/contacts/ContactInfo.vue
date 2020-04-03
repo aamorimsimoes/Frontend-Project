@@ -1,8 +1,8 @@
 <template>
-  <div id="footerWrapper">
-    <!-- only one component inside template (div id=footer & <TheContacts />) -->
-    <div id="footer">
-      <div class="item">
+  <div class="contactWrapper">
+    <!-- only one component inside template -->
+    <div class="contactGeneral">
+      <div class="generalWrapper">
         <h3>CONTATOS</h3>
         <ul>
           <li>
@@ -28,13 +28,15 @@
           </li>
         </ul>
       </div>
-      <div class="item">
+      <div class="scheduleWrapper">
         <h3>HORÁRIO</h3>
         <ul>
           <li>
             2.ª a 6.ª feira, das 08h30 às 13h00 e das 14h00 às 17h30
           </li>
         </ul>
+      </div>
+      <div class="closedWrapper">
         <h3>ENCERRADOS</h3>
         <ul>
           <li>
@@ -55,61 +57,69 @@
         </ul>
       </div>
     </div>
+    <div class="contactMap">
+      <TravelMap class="travel-map"/>
+    </div>
   </div>
 </template>
 
 <script>
+import TravelMap from "../googleMaps/TravelMap";
+
 export default {
-  name: "Footer",
-  components: {}
+  name: "ContactInfo",
+  components: {
+    TravelMap
+  }
 };
 </script>
 
-<style lang="scss">
-.footerWrapper {
-  background-color: red;
+<style lang="scss" scoped>
+.travel-map {
+  height: 400px;
 }
 
-#footer {
-  background-color: lightcyan;
-  height: 90vh;
-  width: 90vw;
-  padding: 0vh 5vw 0vh 5vw;
+.contactGeneral {
   display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
-  align-items: stretch;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-#footer ul {
+.contactGeneral ul {
   list-style-type: none;
-  text-align: center;
+  padding-inline-start: 0px;
 }
 
-@media (min-width: 1025px) {
-  #footer {
-    height: 40vh;
-  }
+// .contactMap {
+//   border: 2px black solid;
+//   width: 85vw;
+//   height: 50vh;
+//   background-color: lightgray;
+// }
+
+.contactWrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 // flex box application
-.item {
-  // width: 100px;
-  color: black;
-  background: white;
-  margin: 15px;
-}
+// .item {
+//   // width: 100px;
+//   color: black;
+//   background: white;
+//   margin: 15px;
+// }
 
-.item:nth-child(1) {
-  order: 1;
-  flex: 1;
-}
-.item:nth-child(2) {
-  order: 2;
-  flex: 1;
-}
-.item:nth-child(3) {
-  order: 3;
-  flex: 1;
-}
+// .item:nth-child(1) {
+//   order: 1;
+//   flex: 1;
+// }
+// .item:nth-child(2) {
+//   order: 2;
+//   flex: 1;
+// }
+// .item:nth-child(3) {
+//   order: 3;
+//   flex: 1;
+// }
 </style>

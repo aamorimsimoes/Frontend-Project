@@ -81,10 +81,10 @@
 </template>
 
 <script>
-import Vue from "../assets/svgs/vue.svg";
+import Vue from "~/assets/svgs/vue.svg";
 import FormattedMessage, {
   getTranslationExported
-} from "../languageProvider/FormattedMessage";
+} from "~/languageProvider/FormattedMessage";
 import localStorage from "local-storage";
 
 export default {

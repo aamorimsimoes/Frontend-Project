@@ -18,7 +18,7 @@
         v-else-if="currentPage === 1"
         class="initialSize"
       >
-        <h1>Component Number 1</h1>
+        <ContactInfo />
       </BaseComponent>
       <BaseComponent
         ref="contactsAnimated_2"
@@ -34,8 +34,9 @@
 <script>
 import Layout from "../layouts/Default";
 import AnimationWrapper from "../layouts/AnimationWrapper";
-import ContactForm from "../components/ContactForm";
+import ContactForm from "../components/contacts/ContactForm";
 import BaseComponent from "../components/general/BaseComponent";
+import ContactInfo from "~/components/contacts/ContactInfo";
 
 export default {
   name: "Contacts",
@@ -43,7 +44,8 @@ export default {
     Layout,
     AnimationWrapper,
     ContactForm,
-    BaseComponent
+    BaseComponent,
+    ContactInfo
   },
   data() {
     return {
