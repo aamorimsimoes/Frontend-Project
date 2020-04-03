@@ -2,15 +2,14 @@
 // Nav bar
 
 .navBarContainer {
-  width: 100%;
-
-  z-index: 9999;
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  transition: 1s ease-in-out;
   background-color: white;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: 1s ease-in-out;
+  width: 100%;
+  z-index: 9999;
 
   @include for-size(phone-only) {
     height: var(--mobile-nav-height);
@@ -29,11 +28,11 @@
 }
 
 .navBarTitles {
-  text-decoration: none;
   color: black;
-  transition: .2s ease-in-out;
   font-family: Geomanist-Complete-Desktop;
   font-weight: bold;
+  text-decoration: none;
+  transition: .2s ease-in-out;
 
   @include for-size(phone-only) {
     font-size: 12px;
@@ -116,15 +115,15 @@
 // Mobile Sidebar
 
 .hamburguer {
-  width: 20px;
-  height: 20px;
+  cursor: pointer;
   float: right;
-  transition: 2s ease-in-out;
+  height: 20px;
   position: fixed;
   right: 20px;
   top: 5px;
+  transition: 2s ease-in-out;
+  width: 20px;
   z-index: 10000;
-  cursor: pointer;
 }
 
 .naveSiderSlider {
@@ -132,34 +131,34 @@
 }
 
 .naveSider {
-  height: 7%;
-  width: 100%;
-  border: 1px solid var(--orange-color);
-  border-top: none;
-  border-right: none;
-  border-left: none;
   background: white;
-  z-index: 1000;
-  position: fixed;
-  top: var(--mobile-nav-height);
-  right: 0;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  border: 1px solid var(--orange-color);
   display: inline-flex;
   flex-direction: column;
-  justify-content: space-around;
   flex-wrap: wrap;
-  text-align: center;
   font-family: Iosevka Term Nerd Font Complete;
-  transition: 1s ease-in-out;
+  height: 7%;
+  justify-content: space-around;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  top: var(--mobile-nav-height);
   transform: translate(120%, 0);
+  transition: 1s ease-in-out;
+  width: 100%;
+  z-index: 1000;
 
-  -webkit-box-shadow: -19px 25px 22px -20px rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: -19px 25px 22px -20px rgba(0, 0, 0, 0.75);
-  box-shadow: -19px 25px 22px -20px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: -19px 25px 22px -20px rgba(0, 0, 0, .75);
+  -moz-box-shadow: -19px 25px 22px -20px rgba(0, 0, 0, .75);
+  box-shadow: -19px 25px 22px -20px rgba(0, 0, 0, .75);
 }
 
 .navSiderImage {
-  height: 50px;
-  width: 50px;
-  padding-top: 8vh;
   align-self: center;
+  height: 50px;
+  padding-top: 8vh;
+  width: 50px;
 }
