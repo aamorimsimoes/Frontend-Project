@@ -25,7 +25,7 @@
     margin: 0;
     width: 100vw !important;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     font-size: var(--desktop-base-font-size);
     left: calc(var(--desktop-page-slider-width) * -1);
     height: calc(98vh - var(--desktop-nav-height));
@@ -133,7 +133,7 @@
     width: var(--tablet-carrousel-arrow);
     border-radius: var(--tablet-carrousel-arrow);
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     top: calc(
       (100vh - var(--desktop-nav-height) - var(--desktop-carrousel-arrow)) / 2
     );
@@ -160,7 +160,7 @@
     left: 20px;
     animation: jumpLeftTablet 3s infinite;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     left: 20px;
     animation: jumpLeftDesktop 3s infinite;
   }
@@ -175,7 +175,7 @@
     right: 20px;
     animation: jumpRightTablet 3s infinite;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     right: 20px;
     animation: jumpRightDesktop 3s infinite;
   }
@@ -203,7 +203,7 @@
   }
   @include for-size(tablet-portrait-up) {
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     display: inline-flex;
   }
 }
@@ -234,7 +234,7 @@
     width: 100%;
     height: 50%;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     width: 60%;
     height: 100%;
   }
@@ -249,7 +249,7 @@
     width: 100%;
     height: 50%;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     width: 40%;
     height: 100%;
   }
@@ -272,7 +272,7 @@
       var(--tablet-page-slider-width);
     padding: 10px;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     font-size: var(--desktop-title-font-size);
     margin: 0 5rem 0 2rem;
     padding: 1rem;
@@ -297,7 +297,7 @@
     margin: 0 var(--tablet-page-slider-width) 0 var(--tablet-page-slider-width);
     padding: 10px;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     font-size: var(--desktop-base-font-size);
     margin: 0 5rem 0 2rem;
     padding: 1rem;

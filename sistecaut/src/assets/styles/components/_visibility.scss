@@ -15,7 +15,7 @@
   @include for-size(tablet-portrait-up) {
     display: initial;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     display: none;
   }
 }
@@ -23,7 +23,7 @@
 .desktopOnly {
   transition: 1s ease-in-out;
   display: none;
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     display: initial;
   }
 }

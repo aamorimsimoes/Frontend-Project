@@ -25,7 +25,7 @@
       var(--tablet-page-slider-width) 20px var(--tablet-page-slider-width);
     font-size: var(--tablet-base-font-size);
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     width: calc(100% - var(--desktop-page-slider-width) * 2);
     height: calc(100% - var(--desktop-nav-height));
     margin: calc(var(--desktop-nav-height) + 20px)
@@ -44,7 +44,7 @@
   @include for-size(tablet-portrait-up) {
     font-size: var(--tablet-title-font-size);
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     font-size: var(--desktop-title-font-size);
   }
 }
@@ -65,7 +65,7 @@
   @include for-size(tablet-portrait-up) {
     margin: 20px 0 20px 0;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     width: 100%;
     margin: 20px 0 20px 0;
   }
@@ -79,7 +79,7 @@
   @include for-size(tablet-portrait-up) {
     height: 200px;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     height: 230px;
   }
 }

@@ -95,7 +95,7 @@
   @include for-size(tablet-portrait-up) {
     width: var(--tablet-page-slider-width);
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     width: var(--desktop-page-slider-width);
   }
 }
@@ -107,7 +107,7 @@
   @include for-size(tablet-portrait-up) {
     top: calc(var(--tablet-page-slider-size) * 2.8);
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     top: calc(var(--desktop-page-slider-size) * 2.8);
   }
 }
@@ -119,7 +119,7 @@
   @include for-size(tablet-portrait-up) {
     bottom: calc(var(--tablet-page-slider-size) * 2);
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     bottom: calc(var(--desktop-page-slider-size) * 2);
   }
 }
@@ -141,7 +141,7 @@
       (var(--tablet-page-slider-width) - var(--tablet-page-slider-size)) / 2
     );
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     height: var(--desktop-page-slider-size);
     width: var(--desktop-page-slider-size);
     border-radius: var(--desktop-page-slider-size);
@@ -166,7 +166,7 @@
   @include for-size(tablet-portrait-up) {
     animation: jumpUpTablet 3s infinite;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     animation: jumpUpDesktop 3s infinite;
   }
 }
@@ -178,7 +178,7 @@
   @include for-size(tablet-portrait-up) {
     animation: jumpDownTablet 3s infinite;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     animation: jumpDownDesktop 3s infinite;
   }
 }

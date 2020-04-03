@@ -17,7 +17,7 @@
   @include for-size(tablet-portrait-up) {
     height: var(--tablet-nav-height);
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     height: var(--desktop-nav-height);
   }
 }
@@ -44,7 +44,7 @@
     margin-left: 8px;
     margin-right: 8px;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     font-size: 30px;
     margin-left: 20px;
     margin-right: 20px;
@@ -83,7 +83,7 @@
     height: 20px;
     width: 110px;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     font-size: 20px;
     height: 20px;
     width: 150px;
@@ -106,7 +106,7 @@
     font-size: 15px;
     width: 110px;
   }
-  @include for-size(desktop-up) {
+  @include for-size(big-desktop-up) {
     width: 150px;
   }
 }
