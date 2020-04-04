@@ -84,7 +84,9 @@ export default {
   },
   methods: {
     goHome: function () {
-      this.$router.push("/")
+      if (this.currentLocation !== "/") {
+        this.$router.push("/");
+      }
     }
   },
 };
