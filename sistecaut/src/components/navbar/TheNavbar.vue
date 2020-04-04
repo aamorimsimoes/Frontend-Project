@@ -11,7 +11,7 @@
     </div>
 
     <!-- Menu that opens on hamburguer click -->
-    <div :class="'naveSider visibleOnMobile ' + showAnimation">
+    <div :class="'naveSider mobileOnly ' + showAnimation">
       <NavbarLinks />
     </div>
 
