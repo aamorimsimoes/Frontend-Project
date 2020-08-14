@@ -1,4 +1,4 @@
-# Gridsome/Vuejs Project
+# Gridsome/Vue.js Project
 <p align="left">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/aamorimsimoes/Frontend-Project?style=for-the-badge">
   </br>
