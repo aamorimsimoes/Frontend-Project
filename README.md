@@ -10,6 +10,14 @@
 
 The project aimed to fulfilling several course requirements using HTML, CSS and JS (The Client-Side Of The Web). 
 By personal choice I used [Gridsome](https://gridsome.org/) (free & open source [Vue.js](https://vuejs.org/)-powered framework (model–view–viewmodel (MVVM - software architectural pattern) ) for building the user interface and single-page application.
+</br>
+Modules used by main module:
+</br>
+- [postcss-scss](https://www.npmjs.com/package/postcss-scss) A SCSS parser for [PostCSS](https://postcss.org/);
+- [stylelint](https://stylelint.io/) A mighty, modern linter that helps you avoid errors and enforce conventions in your styles;
+- [vue-svg-loader](https://vue-svg-loader.js.org/);
+</br>
+Module bundler used: [webpack](https://webpack.js.org/) its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging
 
 [Netlify](https://www.netlify.com/) (who's connected to my GitHub repository pulling my source code) was used to deploy and host my project website.
 To visit, click [here](https://frontendproject.netlify.app/).
@@ -27,5 +35,9 @@ $ npm install
 3. Run this command inside the project directory to start a local development server. The server will start at http://localhost:8080/
 ```bash
 $ gridsome develop
+```
+4. (Extra) Run this command to start GraphQL Playground and explore schema or data. Open your browser and go to http://localhost:8080/___explore ;
+```bash
+$ gridsome explore
 ```
 
