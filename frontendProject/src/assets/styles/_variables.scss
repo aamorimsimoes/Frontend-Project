@@ -1,0 +1,76 @@
+// Default variables
+:root {
+  // font properties
+  --base-font-size: 20px;
+  --font-weight: lighter;
+  --main-font-family: Geomanist-Complete-Desktop;
+  --title-font-size: 50px;
+
+  // color palette Orange Project
+  --grey-color: #56565a;
+  --orange-color: #f08013;
+  // general colors
+  --bg-color: #dfa7a7;
+
+  //desktop component dimensions
+  --desktop-width: 90vw;
+  --desktop-height: 80vh;
+  --desktop-padding: 0vh 5vw 0vh 5vw;
+  --desktop-page-slider-width: 130px;
+  --desktop-page-slider-size: 60px;
+  --desktop-nav-height: 90px;
+  --desktop-base-font-size: 20px;
+  --desktop-title-font-size: 80px;
+  --desktop-carrousel-arrow: 60px;
+  // tablet component dimensions
+  --tablet-page-slider-width: 95px;
+  --tablet-page-slider-size: 50px;
+  --tablet-nav-height: 85px;
+  --tablet-base-font-size: 15px;
+  --tablet-title-font-size: 55px;
+  --tablet-carrousel-arrow: 50px;
+  // mobile component dimensions
+  --mobile-page-slider-width: 30px;
+  --mobile-page-slider-size: 35px;
+  --mobile-nav-height: 10px;
+  --mobile-base-font-size: 10px;
+  --mobile-title-font-size: 20px;
+  --mobile-carrousel-arrow: 35px;
+}
+
+// // Light default theme
+// body {
+//   --bg-color: #f3f7f9;
+//   --bg-content-color: #fff;
+//   --bg-code: #fffbf3;
+//   --body-color: #444;
+//   --title-color: #111;
+//   --link-color: #6b17e6;
+//   --border-color:  rgba(0,0,0,.1);;
+//   --space: 3.5rem;
+//   --content-width: 860px;
+//   --header-height: 80px;
+//   --radius: 5px;
+// }
+
+// // Make  things smaller for mobile
+// @media screen and (max-width: 650px) {
+//   html {
+//     --base-font-size: 17px;
+//   }
+//   body {
+//     --space: 1.5rem;
+//     --header-height: 60px;
+//   }
+// }
+
+// // Override variables for Dark theme
+// body[data-theme="dark"] {
+//   --bg-color: #0d2538;
+//   --bg-content-color: #0f2d44;
+//   --bg-code: rgba(0,0,0,.3);
+//   --border-color:  rgba(255,255,255,.1);;
+//   --body-color: #ced8de;
+//   --title-color: #fff;
+//   --link-color: #af9cef;
+// }
