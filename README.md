@@ -20,6 +20,7 @@ Modules used by main module:
 [Webpack](https://webpack.js.org/) is the module bundler used and its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging.
 
 [Netlify](https://www.netlify.com/) who's connected to my GitHub repository pulling my source code) was used to deploy and host my project website.
+</br></br>
 To visit, click [here](https://frontendproject.netlify.app/).
 
 # Usage
