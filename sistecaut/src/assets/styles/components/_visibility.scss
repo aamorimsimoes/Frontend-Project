@@ -24,7 +24,11 @@
   transition: 1s ease-in-out;
   display: none;
   @include for-size(big-desktop-up) {
-    display: initial;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    color: var(--grey-color);
+
   }
 }
 
