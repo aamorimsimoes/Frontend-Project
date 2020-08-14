@@ -1,2 +1,2 @@
-# sistecautProject
+# Frontend project
 Frontend project

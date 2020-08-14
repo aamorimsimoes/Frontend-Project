@@ -5,9 +5,9 @@
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
 module.exports = {
-  siteName: 'sistecautProject',
+  siteName: '',
   siteDescription: 'A simple, beautiful & minimalistic project using Gridsome',
-  siteUrl: 'https://sistecautproject.netlify.com',
+  siteUrl: 'https://frontendproject.netlify.com',
   plugins: [],
   chainWebpack: config => {
     const svgRule = config.module.rule('svg')

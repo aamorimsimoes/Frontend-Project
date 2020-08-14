@@ -63,10 +63,10 @@ export default {
   data() {
     return {
       pageTitles: [
-        "products.page.robotCells",
-        "products.page.specialMach",
-        "products.page.eletricServs",
-        "products.page.machServs"
+        "products.page.product01",
+        "products.page.product02",
+        "products.page.product03",
+        "products.page.product04"
       ], // pages titles
       currentPage: 0 // current page showing
     };
