@@ -11,7 +11,7 @@
     <p v-for="(text, index) in bodyContent" :key="`${id}_${index}`">
       <FormattedMessage :id="text" />
     </p>
-    <a class="linkSize" v-if="link" :href="link">{{ link }}</a>
+    <a class="linkSize" v-if="link" :href="link">Click here</a>
     <div />
   </div>
 </template>

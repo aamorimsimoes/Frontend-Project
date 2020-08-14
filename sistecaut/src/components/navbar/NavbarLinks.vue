@@ -4,7 +4,7 @@
     <div class="STAlogo mobileOnly">
       <g-image
         v-on:click="goHome"
-        alt="STAlogo"
+        alt="Orangelogo"
         src="~/assets/icons/staFull.png"
         width="20px"
         height="20px"
@@ -15,7 +15,7 @@
     <div class="STAlogo tabletOnly">
       <g-image
         v-on:click="goHome"
-        alt="STAlogo"
+        alt="Orangelogo"
         src="~/assets/icons/staFull.png"
         width="50px"
         height="50px"
@@ -26,12 +26,13 @@
     <div class="STAlogo desktopOnly">
       <g-image
         v-on:click="goHome"
-        alt="STAlogo"
+        alt="Orangelogo"
         src="~/assets/icons/staFull.png"
         width="70px"
         height="70px"
         fit="outside"
       />
+      <h2 class="logoText">Orange Company Lda.</h2>
     </div>
     <!-- Links -->
     <div class="STAlinks">
@@ -79,20 +80,25 @@ export default {
     return {
       nPages: 3, // number of available pages
       currentPage: 0, // current page showing
-      currentLocation: this.$router.history.current.path
+      currentLocation: this.$router.history.current.path,
     };
   },
   methods: {
-    goHome: function () {
+    goHome: function() {
       if (this.currentLocation !== "/") {
         this.$router.push("/");
       }
-    }
+    },
   },
 };
 </script>
 
 <style>
+.logoText {
+  font-family: var(--main-font-family);
+  font-weight: var(--font-weight);
+}
+
 .STAlogo {
   float: left;
   padding: 8px 2vw;

@@ -6,25 +6,25 @@
         <h3>CONTATOS</h3>
         <ul>
           <li>
-            SISTECAUT Lda.
+            Orange Company Lda.
           </li>
           <li>
-            Tlm: +351 915 022 818
+            Tlm: +351 911 111 000
           </li>
           <li>
-            Tel: +351 234 314 322
+            Tel: +351 234 111 000
           </li>
           <li>
             E-mail:
           </li>
           <li>
-            sistecaut@sistecaut.com
+            company@orangecompany.com
           </li>
           <li>
             Morada:
           </li>
           <li>
-            R. João Francisco do Casal 87/89, 3800-266 Aveiro
+            R. das Laranjeiras 87, 3000-123 Oliveira do Bairro
           </li>
         </ul>
       </div>

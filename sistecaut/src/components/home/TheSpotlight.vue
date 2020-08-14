@@ -32,7 +32,7 @@ export default {
             "spotlight.news0.bodycontent02"
           ],
           link:
-            "https://www.facebook.com/sistecaut.aveiro/posts/480890865799104"
+            "https://www.google.com"
         },
         {
           imgSource: "news/pme-excelencia.jpg",

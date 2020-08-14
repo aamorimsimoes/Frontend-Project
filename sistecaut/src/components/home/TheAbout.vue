@@ -1,6 +1,6 @@
 <template>
   <div>
-    <span class="titleSize">SISTECAUT Lda.</span>
+    <span class="titleSize">Orange Company Lda.</span>
     <p>
       <FormattedMessage id="about.bodyContent00" />
     </p>
@@ -8,9 +8,7 @@
       <FormattedMessage id="about.bodyContent01" />
     </p>
     <p>
-      <FormattedMessage id="about.bodyContent02" />Tem capacidade para projetar
-      e construir sistemas por medida, para processo industrial ou automatização
-      do mesmo.
+      <FormattedMessage id="about.bodyContent02" />
     </p>
     <p>
       <FormattedMessage id="about.bodyContent03" />

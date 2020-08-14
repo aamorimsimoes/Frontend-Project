@@ -1,10 +1,10 @@
 <template>
   <div>
     <span class="titleSize">
-      <FormattedMessage id="products.page.robotCells" />
+      <FormattedMessage id="products.page.product01" />
     </span>
     <p>
-      <FormattedMessage id="products.robotCells.description" />
+      <FormattedMessage id="products.product01.description" />
     </p>
     <div class="productsWrapper">
       <Card
@@ -35,20 +35,20 @@ export default {
         {
           imgSource: "products/robotisedCells/robotisedCells_card00.jpg",
           id: "robot00",
-          title: "products.robotCells.card00.title",
-          bodyContent: ["products.robotCells.card00.content"]
+          title: "products.product01.card00.title",
+          bodyContent: ["products.product01.card00.content"]
         },
         {
           imgSource: "products/robotisedCells/robotisedCells_card01.jpg",
           id: "robot01",
-          title: "products.robotCells.card01.title",
-          bodyContent: ["products.robotCells.card01.content"]
+          title: "products.product01.card01.title",
+          bodyContent: ["products.product01.card01.content"]
         },
         {
           imgSource: "products/robotisedCells/robotisedCells_card02.jpg",
           id: "robot02",
-          title: "products.robotCells.card02.title",
-          bodyContent: ["products.robotCells.card02.content"]
+          title: "products.product01.card02.title",
+          bodyContent: ["products.product01.card02.content"]
         }
       ]
     };

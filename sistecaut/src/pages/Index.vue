@@ -54,7 +54,7 @@ export default {
     AnimationWrapper,
     BaseComponent
   },
-  name: "Sistecaut",
+  name: "Orange Company",
   data() {
     return {
       pageTitles: [

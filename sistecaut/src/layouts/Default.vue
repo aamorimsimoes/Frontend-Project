@@ -23,7 +23,7 @@ import Navbar from "../components/navbar/TheNavbar";
 
 export default {
   metaInfo: {
-    title: "Sistecaut, Lda"
+    title: "Orange"
   },
   // data() {
   //   return {
