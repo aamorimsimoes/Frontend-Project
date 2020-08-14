@@ -15,9 +15,9 @@ Modules used by main module:
 </br>
 - [postcss-scss](https://www.npmjs.com/package/postcss-scss) A SCSS parser for [PostCSS](https://postcss.org/);
 - [stylelint](https://stylelint.io/) A mighty, modern linter that helps you avoid errors and enforce conventions in your styles;
-- [vue-svg-loader](https://vue-svg-loader.js.org/);
+- [vue-svg-loader](https://vue-svg-loader.js.org/) Use SVG files as Vue components; 
 </br>
-Module bundler used: [webpack](https://webpack.js.org/) its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging
+[webpack](https://webpack.js.org/) Module bundler used and its main purpose is to bundle JavaScript files for usage in a browser, yet it is also capable of transforming, bundling, or packaging
 
 [Netlify](https://www.netlify.com/) (who's connected to my GitHub repository pulling my source code) was used to deploy and host my project website.
 To visit, click [here](https://frontendproject.netlify.app/).
