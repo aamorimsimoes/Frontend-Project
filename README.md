@@ -1,4 +1,4 @@
-# Vuejs Project
+# Gridsome/Vuejs Project
 <p align="left">
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/aamorimsimoes/Frontend-Project?style=for-the-badge">
   </br>
@@ -11,7 +11,8 @@
 The project aimed to fulfilling several course requirements using HTML, CSS and JS (The Client-Side Of The Web). 
 By personal choice I used [Gridsome](https://gridsome.org/) (free & open source [Vue.js](https://vuejs.org/)-powered framework (model–view–viewmodel (MVVM - software architectural pattern) ) for building the user interface and single-page application.
 
-Check it click [here](https://frontendproject.netlify.app/).
+[Netlify](https://www.netlify.com/) (who's connected to my GitHub repository pulling my source code) was used to deploy and host my project website.
+To visit, click [here](https://frontendproject.netlify.app/).
 
 # Usage
 
