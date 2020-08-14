@@ -15,7 +15,7 @@ I used [Gridsome](https://gridsome.org/) by personal choice, a free and an open-
 </br>
 Modules used:
 </br>
-- [postcss-scss](https://www.npmjs.com/package/postcss-scss) A SCSS parser for [PostCSS](https://postcss.org/);
+- [postcss-scss](https://www.npmjs.com/package/postcss-scss) a SCSS parser for [PostCSS](https://postcss.org/);
 - [stylelint](https://stylelint.io/) mighty, modern linter that helps you avoid errors and enforce conventions in your styles;
 - [vue-svg-loader](https://vue-svg-loader.js.org/) enables the use of SVG files as Vue components; 
 
