@@ -1,10 +1,10 @@
 <template>
   <div>
     <span class="titleSize">
-      <FormattedMessage id="products.page.specialMach" />
+      <FormattedMessage id="products.page.product02" />
     </span>
     <p>
-      <FormattedMessage id="products.specialMach.description" />
+      <FormattedMessage id="products.product02.description" />
     </p>
     <div class="productsWrapper">
       <Card
@@ -35,20 +35,20 @@ export default {
         {
           imgSource: "products/specialMachines/specialMachines_card00.jpg",
           id: "special00",
-          title: "products.specialMach.card00.title",
-          bodyContent: ["products.specialMach.card00.content"]
+          title: "products.product02.card00.title",
+          bodyContent: ["products.product02.card00.content"]
         },
         {
           imgSource: "products/specialMachines/specialMachines_card01.jpg",
           id: "special01",
-          title: "products.specialMach.card01.title",
-          bodyContent: ["products.specialMach.card01.content"]
+          title: "products.product02.card01.title",
+          bodyContent: ["products.product02.card01.content"]
         },
         {
           imgSource: "products/specialMachines/specialMachines_card02.jpg",
           id: "special02",
-          title: "products.specialMach.card02.title",
-          bodyContent: ["products.specialMach.card02.content"]
+          title: "products.product02.card02.title",
+          bodyContent: ["products.product02.card02.content"]
         }
       ]
     };

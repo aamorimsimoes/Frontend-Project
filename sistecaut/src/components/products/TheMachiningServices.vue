@@ -1,10 +1,10 @@
 <template>
   <div>
     <span class="titleSize">
-      <FormattedMessage id="products.page.machServs" />
+      <FormattedMessage id="products.page.product04" />
     </span>
     <p>
-      <FormattedMessage id="products.machServs.description" />
+      <FormattedMessage id="products.product04.description" />
     </p>
     <div class="productsWrapper">
       <Card
@@ -35,20 +35,20 @@ export default {
         {
           imgSource: "products/machiningServices/machiningServices_card00.jpg",
           id: "robot00",
-          title: "products.machServs.card00.title",
-          bodyContent: ["products.machServs.card00.content"]
+          title: "products.product04.card00.title",
+          bodyContent: ["products.product04.card00.content"]
         },
         {
           imgSource: "products/machiningServices/machiningServices_card01.jpg",
           id: "robot01",
-          title: "products.machServs.card01.title",
-          bodyContent: ["products.machServs.card01.content"]
+          title: "products.product04.card01.title",
+          bodyContent: ["products.product04.card01.content"]
         },
         {
           imgSource: "products/machiningServices/machiningServices_card02.jpg",
           id: "robot02",
-          title: "products.machServs.card02.title",
-          bodyContent: ["products.machServs.card02.content"]
+          title: "products.product04.card02.title",
+          bodyContent: ["products.product04.card02.content"]
         }
       ]
     };
